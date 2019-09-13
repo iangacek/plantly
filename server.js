@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const axios = require("axios");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -10,13 +11,34 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+``;
 
 // Define API routes here
 
-// Send every other request to the React app
-// Define any API routes before this runs
+
+// API plant search request
+app.get("/API-search/:plantSearch", (req, res) => {
+  var tolken = "token=c1crZVFidEhCZzhoOTVnUWVyNFNZUT09";
+  var endPoint = "https://trefle.io/api/plants?"+ tolken + "&common_name=" + req.params.plantSearch;
+  axios.get(endPoint)
+  .then(data => {res.json(data.data)})
+    .catch(err => res.json(err));
+});
+
+// API ID search
+app.get("/ID-search/:id", (req, res) => {
+  var tolken = "token=c1crZVFidEhCZzhoOTVnUWVyNFNZUT09";
+  console.log(req.params.id)
+  var endPoint = "https://trefle.io/api/plants/" + req.params.id + "?" + tolken;
+  axios.get(endPoint)
+  .then(data => {res.json(data.data)})
+    .catch(err => res.json(err));
+});
+
+// Default route to index.html
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  // res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.json("Hello!");
 });
 
 app.listen(PORT, () => {
