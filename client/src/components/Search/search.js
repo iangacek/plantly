@@ -8,7 +8,7 @@ function Search() {
             <input 
             name="title"
             type="text"
-            placeholder="Enter a Book Title"
+            placeholder="enter a plant name"
             ></input>
             <button>Search</button>
         </form>
