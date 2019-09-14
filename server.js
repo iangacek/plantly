@@ -4,7 +4,6 @@ const PORT = process.env.PORT || 3001;
 var mongoose = require("mongoose");
 const app = express();
 
-
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -15,7 +14,10 @@ if (process.env.NODE_ENV === "production") {
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/plantly";
 
-mongoose.connect(MONGODB_URI, {useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+});
 
 // Define API routes here
 
