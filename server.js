@@ -3,6 +3,8 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const axios = require("axios");
+const request = require("request"); //Makes http calls
+const cheerio = require("cheerio"); //Scraper
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
