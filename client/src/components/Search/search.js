@@ -1,5 +1,6 @@
 import React from "react";
 import API from "../../API/API";
+import PlantData from "../../API/plantlyApi.json"
 
 class Search extends React.Component{
   state = {
@@ -52,6 +53,18 @@ class Search extends React.Component{
           ></input>
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
+        {PlantData.map((plant, index)=>{
+          return <div> 
+            <h1>{plant.commonName}</h1>;
+            <h3>{plant.scientificName}</h3>;
+            <p>Lighting Requirements:{plant.light}</p>;
+            <p>Watering:{plant.water}</p>;
+            <p>Soil Preferences:{plant.soil}</p>;
+            <p>Propagation:{plant.propagation}</p>;
+            <p>Fertilizing:{plant.fertilizer}</p>;
+            <p>Pet Toxicity:{plant.petToxicity}</p>;
+          </div>
+        })}
       </div>
     );
   }
