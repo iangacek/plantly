@@ -24,10 +24,11 @@ mongoose.connect(MONGODB_URI, {
 // Define API routes here
 
 
-// API plant search request
+// // API plant search request
 app.get("/API-search/:plantSearch", (req, res) => {
+  console.log('endpoint hit');
   var tolken = "token=c1crZVFidEhCZzhoOTVnUWVyNFNZUT09";
-  var endPoint = "https://trefle.io/api/plants?"+ tolken + "&common_name=" + req.params.plantSearch;
+  var endPoint = "https://trefle.io/api/plants?"+ tolken + "&q=" + req.params.plantSearch;
   axios.get(endPoint)
   .then(data => {res.json(data.data)})
     .catch(err => res.json(err));
