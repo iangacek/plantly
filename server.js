@@ -17,11 +17,19 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 };
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/plantly";
+
+mongoose.connect(MONGODB_URI, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+});
+
 // Define API routes here
 // app.use(routes);
 
-// API plant search request
+// // API plant search request
 app.get("/API-search/:plantSearch", (req, res) => {
+  console.log('endpoint hit');
   var tolken = "token=c1crZVFidEhCZzhoOTVnUWVyNFNZUT09";
   var endPoint = "https://trefle.io/api/plants?"+ tolken + "&q=" + req.params.plantSearch;
   axios.get(endPoint)
