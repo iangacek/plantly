@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 3001;
 var mongoose = require("mongoose");
 const app = express();
 const axios = require("axios");
+const fs = require('fs');
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -42,6 +43,14 @@ app.get("/ID-search/:id", (req, res) => {
   axios.get(endPoint)
   .then(data => {res.json(data.data)})
     .catch(err => res.json(err));
+});
+
+app.get("/plantlyAPI", (req,res) => {
+  fs.readFile("./client/src/API/plantlyApi.json", "UTF-8", (err, data) => {
+    if (err) throw err;
+    var response = JSON.parse(data)
+    res.json(response);
+  })
 });
 
 // Default route to index.html
