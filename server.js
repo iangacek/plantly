@@ -2,8 +2,6 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const axios = require("axios");
-const request = require("request"); //Makes http calls
-const cheerio = require("cheerio"); //Scraper
 // const routes = require("./routes");
 
 // Set server-port to 3001
@@ -17,6 +15,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 };
 
+// References MongoDB database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/plantly";
 
 mongoose.connect(MONGODB_URI, {
