@@ -10,7 +10,7 @@ function Navbar (){
         <li id="title">
           <p>Plantly</p>
         </li>
-        <li className="item">
+        <li>
             <Link to={"/search"}>Search</Link>
         </li>
         <li>
