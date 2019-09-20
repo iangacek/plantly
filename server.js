@@ -47,41 +47,11 @@ app.get("/ID-search/:id", (req, res) => {
     .catch(err => res.json(err));
 });
 
-app.get("/scrape/:plantSearch", (req, res) => {
-  console.log("scrape ran");
-
-  var plantSearch = "bamboo";
-  // First, we grab the body of the html with request
-  request(
-    "https://en.wikipedia.org/wiki/" + plantSearch,
-    (error, response, body) => {
-      if (!error && response.statusCode === 200) {
-        // Then, we load that into cheerio and save it to $ for a shorthand selector
-        const $ = cheerio.load(body);
-        let count = 0;
-        // Targets wiki paragraph parent
-        $("mw-parser-output").each(function(i, element) {
-          // Save an empty result object
-          //   let count = i;
-          //   let result = {};
-          // Add the text and href of every link, and summary and byline, saving them to object
-          result.element =
-            $(description)
-              .children("p")
-              .text() || "No description available";
-          result.link = $(description);
-        });
-      }
-    }
-  );
-});
-
 // Default route to index.html
 app.get("*", (req, res) => {
   // res.sendFile(path.join(__dirname, "./client/build/index.html"));
   res.json("Hello!");
 });
-
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
