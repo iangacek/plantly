@@ -47,6 +47,14 @@ app.get("/ID-search/:id", (req, res) => {
     .catch(err => res.json(err));
 });
 
+app.get("/plantlyAPI", (req,res) => {
+  fs.readFile("./client/src/API/plantlyApi.json", "UTF-8", (err, data) => {
+    if (err) throw err;
+    var response = JSON.parse(data)
+    res.json(response);
+  })
+});
+
 // Default route to index.html
 app.get("*", (req, res) => {
   // res.sendFile(path.join(__dirname, "./client/build/index.html"));
