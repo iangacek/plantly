@@ -47,15 +47,15 @@ class Search extends React.Component{
   };
 
 
-  displayPlants = () => {
-    console.log(this.state.plants);
-    if(this.state.plants.data === undefined){
-      return null;
-    }
-    return this.state.plants.data.items.map(plants => {
-      return ;
-    })
-  };
+  // displayPlants = () => {
+  //   console.log(this.state.plants);
+  //   if(this.state.plants.data === undefined){
+  //     return null;
+  //   }
+  //   return this.state.plants.data.items.map(plants => {
+  //     return ;
+  //   })
+  // };
 
   render() {
     return ( 
@@ -72,7 +72,7 @@ class Search extends React.Component{
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
 
-        {this.displayPlants()}
+        {/* {this.displayPlants()} */}
         
         {PlantData.map((plant, index)=>{
           return (
