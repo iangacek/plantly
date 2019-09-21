@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "commonName": "[Swiss Cheese Plant, Split Leaf Philodendron]",
+    "commonName": "Swiss Cheese Plant, Split Leaf Philodendron",
     "scientificName": "Monstera Deliciosa",
     "propagation": "Cuttings",
     "light": "Bright Indirect",
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "commonName": "[Snake Plant, Mother in Law's Tongue]",
+    "commonName": "Snake Plant, Mother in Law's Tongue",
     "scientificName": "Sansevieria trifasciata ",
     "propagation": "Cuttings, Rhizome Division",
     "light": "Part Sun, Shade",
@@ -67,7 +67,7 @@
   },
   {
     "id": 7,
-    "commonName": "[Aloe, Aloe Vera]",
+    "commonName": "Aloe, Aloe Vera",
     "scientificName": "Aloe barbadensis",
     "propagation": "Offsets",
     "light": "Bright indirect light",
@@ -163,115 +163,5 @@
     "water": "Water when the top 2-3 inches of soil is dry",
     "fertilizer": "Diluted fertilizer approximately every two weeks in Spring and Summer",
     "petToxicity": "Toxic"
-  },
-  {
-    "id": 16,
-    "commonName": "Asparagus Fern",
-    "scientificName": "",
-    "propagation": "",
-    "light": "",
-    "soil": "",
-    "water": "",
-    "fertilizer": "",
-    "petToxicity": ""
-  },
-  {
-    "id": 17,
-    "commonName": "Yucca",
-    "scientificName": "",
-    "propagation": "",
-    "light": "",
-    "soil": "",
-    "water": "",
-    "fertilizer": "",
-    "petToxicity": ""
-  },
-  {
-    "id": 18,
-    "common name": "African Violet",
-    "scientificName": "",
-    "propagation": "",
-    "light": "",
-    "soil": "",
-    "water": "",
-    "fertilizer": "",
-    "petToxicity": ""
-  },
-  {
-    "id": 19,
-    "commonName": "Air Plant",
-    "scientificName": "",
-    "propagation": "",
-    "light": "",
-    "soil": "",
-    "water": "",
-    "fertilizer": "",
-    "petToxicity": ""
-  },
-  {
-    "id": 20,
-    "commonName": "Dragon Tree",
-    "scientificName": "",
-    "propagation": "",
-    "light": "",
-    "soil": "",
-    "water": "",
-    "fertilizer": "",
-    "petToxicity": ""
-  },
-  {
-    "id": 21,
-    "commonName": "Prayer Plant",
-    "scientificName": "",
-    "propagation": "",
-    "light": "",
-    "soil": "",
-    "water": "",
-    "fertilizer": "",
-    "petToxicity": ""
-  },
-  {
-    "id": 22,
-    "commonName": "Ponytail Palm",
-    "scientificName": "",
-    "propagation": "",
-    "light": "",
-    "soil": "",
-    "water": "",
-    "fertilizer": "",
-    "petToxicity": ""
-  },
-  {
-    "id": 23,
-    "commonName": "Christmas Cactus",
-    "scientificName": "",
-    "propagation": "",
-    "light": "",
-    "soil": "",
-    "water": "",
-    "fertilizer": "",
-    "petToxicity": ""
-  },
-  {
-    "id": 24,
-    "commonName": "Umbrella Tree",
-    "scientificName": "",
-    "propagation": "",
-    "light": "",
-    "soil": "",
-    "water": "",
-    "fertilizer": "",
-    "petToxicity": ""
-  },
-  {
-    "id": 25,
-    "commonName": "Common Ivy",
-    "scientificName": "",
-    "propagation": "",
-    "light": "",
-    "soil": "",
-    "water": "",
-    "fertilizer": "",
-    "petToxicity": ""
   }
 ]

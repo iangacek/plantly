@@ -1,12 +1,15 @@
-const axios = require("axios");
+const axios = require("axios"); // Queries api
 
 export default {
-    searchById: (id) => {
-        return axios.get(`/ID-search/${id}`)
+
+    findAllPlants: () => {
+        console.log('api.findallPlants()')
+        return axios.get("/plantly-explore")
     },
 
     searchPlants: (term) => {
-        return axios.get("/API-search/" + term)
+        console.log('api.searchPlants(' + term + ")")
+        return axios.get("/plantly-search/" + term)
     }
 };
   
