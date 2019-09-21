@@ -46,6 +46,7 @@ class Search extends React.Component {
         {this.state.plants.map(plant => (
           <PlantCard plant={plant} />
         ))}
+
       </div>
     );
   }
