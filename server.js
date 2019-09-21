@@ -1,10 +1,11 @@
 const express = require("express");
-const path = require("path");
-var mongoose = require("mongoose");
+// const path = require("path");
+const mongoose = require("mongoose");
 const app = express();
-const axios = require("axios");
-const fs = require("fs"); // Require File System data in .JSON
+// const axios = require("axios");
+// const fs = require("fs"); // Require File System data in .JSON
 const db = require("./models"); // Requires plant schema in models folder
+require('dotenv').config()
 
 // Set server-port to 3001
 const PORT = process.env.PORT || 3001;
@@ -18,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // References MongoDB database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/plantly";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/plantly";
 
 mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
