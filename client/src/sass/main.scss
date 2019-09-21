@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:100&display=swap');
+
+body{
+    margin:0;   
+    background-color: white;
+    background: url('./images/image1.jpg')  no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.home {
+    font-size: 50px;
+    color: white;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    text-align: center;
+    
+}
+
+.description {
+    font-weight: bold;
+}
+
+
+
+.navbar {
+    border-bottom: 3px solid #dddddd;
+    border-top: 3px solid #dddddd;
+    padding-top: 2%;
+    background-image: radial-gradient(white, rgb(255, 255, 255));
+    height: 225px;
+    display: grid;
+    grid-area: header;
+    // grid-template-columns:1fr auto 1fr;
+    // grid-template-rows: auto 1fr  auto;
+    // &__title{
+    //     grid-area: 1/2/1/4;
+    //     margin: 2em;
+    // }
+    
+}
+
+.nav {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+
+}
+
+a { color: grey; }
+
+.list {
+    color: grey;
+    display: block;
+    float: right;
+    width: 200px;
+    // height: 100px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    line-height: 320px;
+    text-align: center;
+    text-decoration: none;
+    // background: #ffffff;
+
+}
+
+.title {
+    margin-top: 0px;
+    display: inline-block;
+    // float: center;
+    width: 250px;
+    height: 100px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 125px;
+    font-weight: 200;
+    line-height: 0px;
+    color: grey;
+    text-align: center;
+    text-decoration: none;
+    // background: #ffffff;
+ 
+}
+.item{
+    font-size:25px;
+    color:black;
+}
+.navbar li {
+    // color: black;
+    // display: inline-block;
+    // padding: 20px 0;
+    // margin:5px;
+    // text-align: center;
+
+    
+    
+   
+};

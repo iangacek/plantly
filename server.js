@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+var mongoose = require("mongoose");
 const app = express();
 const axios = require("axios");
 const fs = require("fs"); // Require File System data in .JSON
@@ -7,6 +8,8 @@ const mongoose = require("mongoose");
 const db = require("./models"); // Requires plant schema in models folder
 
 // Set server-port to 3001
+const PORT = process.env.PORT || 3001;
+
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here

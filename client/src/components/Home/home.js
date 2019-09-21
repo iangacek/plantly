@@ -1,11 +1,12 @@
 import React from "react";
+import "../../index.css"
 
 function Home() {
     return (
-      <div>
-        <h1>Welcome to Plantly</h1>
-        <div>
-            <p>🚧 This website is currently under construction 🚧</p>
+      <div class = "home">
+        <h1>Welcome to plantly</h1>
+        <div class = "description">
+            <p> This website is currently under construction </p>
         </div>
       </div>
     );
