@@ -10,9 +10,9 @@ const plantSchema = new Schema({
   soil: { type: String},
   water: { type: String},
   fertilizer: { type: String},
-  petToxicity: { type: String}
+  petToxicity: { type: String},
+  img: { type: String}
 });
 
-const Plant = mongoose.model("plant", plantSchema);
+module.exports = mongoose.model("plant", plantSchema);
 
-module.exports = Plant;
