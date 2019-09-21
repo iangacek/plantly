@@ -48,12 +48,12 @@ mongoose.connect(MONGODB_URI, {
 //     .catch(err => res.json(err));
 // });
 
-// Plantly exploure route
+// Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
   db.plant.find().then(plants => res.json(plants));
 });
 
-// Plantly search route
+// Plantly database API route
 app.get("/plantly-search/:plantName", (req, res) => {
   console.log(req.params.plantName)
   db.plant.find({ commonName: { "$regex": req.params.plantName, "$options": "i" } }).then(plants => res.json(plants));

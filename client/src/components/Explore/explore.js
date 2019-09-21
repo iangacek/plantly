@@ -8,16 +8,10 @@ class Explore extends React.Component {
 
   componentDidMount() {
     API.findAllPlants().then(plants =>
-      {
-        console.log('api returned ', plants);
-        this.setState({
-          plants: plants.data
-        })
-      }
-      
-    ).catch((err) => {
-      console.log("api error", err) 
-    })
+      this.setState({
+        plants: plants.data
+      })
+    );
   }
 
   render() {
