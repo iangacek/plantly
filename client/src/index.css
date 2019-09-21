@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:100&display=swap");
+body {
+  margin: 0;
+  background-color: white;
+  background: url("./images/image1.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.home {
+  font-size: 50px;
+  color: #3d3d3d;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align: center; }
+
+.navbar {
+  border-bottom: 3px solid #dddddd;
+  border-top: 3px solid #dddddd;
+  padding-top: 2%;
+  background-image: radial-gradient(white, white);
+  height: 225px;
+  display: grid;
+  grid-area: header; }
+
+.nav {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px; }
+
+a {
+  color: grey; }
+
+.list {
+  color: grey;
+  display: block;
+  float: right;
+  width: 200px;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size: 25px;
+  font-weight: 200;
+  line-height: 320px;
+  text-align: center;
+  text-decoration: none; }
+
+.title {
+  margin-top: 0px;
+  display: inline-block;
+  width: 250px;
+  height: 100px;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size: 125px;
+  font-weight: 200;
+  line-height: 0px;
+  color: grey;
+  text-align: center;
+  text-decoration: none; }
+
+.item {
+  font-size: 25px;
+  color: black; }
