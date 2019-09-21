@@ -10,9 +10,12 @@ body {
 
 .home {
   font-size: 50px;
-  color: #3d3d3d;
+  color: white;
   font-family: 'Encode Sans Expanded', sans-serif;
   text-align: center; }
+
+.description {
+  font-weight: bold; }
 
 .navbar {
   border-bottom: 3px solid #dddddd;
