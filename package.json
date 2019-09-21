@@ -10,7 +10,8 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "sass": "node-sass client/src/sass/main.scss client/src/index.css -w"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,7 @@
     "axios": "^0.19.0",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
-    "mongoose": "^5.7.0"
+    "mongoose": "^5.7.0",
+    "node-sass": "^4.12.0"
   }
 }
