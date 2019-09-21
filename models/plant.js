@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const plantSchema = new Schema({
   id: { type: String, required: true, unique:true },
-  commonName: { type: [String], required:true },
+  commonName: { type: String, required:true },
   scientificName: { type: String, required: true },
   propagation: { type: String},
   light: { type: String},
