@@ -4,6 +4,7 @@ var mongoose = require("mongoose");
 const app = express();
 const axios = require("axios");
 const db = require("./models"); // Requires plant schema in models folder
+require('dotenv').config()
 
 // Set server-port to 3001
 const PORT = process.env.PORT || 3001;
@@ -18,6 +19,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // References MongoDB database
+
 var MONGODB_URI = 'mongodb+srv://admin:admin@cluster0-fyxsd.mongodb.net/test?retryWrites=true&w=majority';
 
 mongoose.connect(MONGODB_URI, {
