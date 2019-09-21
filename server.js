@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require("path");
 var mongoose = require("mongoose");
 const app = express();
 const axios = require("axios");
@@ -70,5 +69,5 @@ app.listen(PORT, () => {
 });
 
 // Creates initial plant-database from plantlyAPI.json
-var plantdb = require("./plantlyAPI.json")
-db.plant.create(plantdb).then(plant => console.log(plant));
+// var plantdb = require("./plantlyAPI.json")
+// db.plant.create(plantdb).then(plant => console.log(plant));

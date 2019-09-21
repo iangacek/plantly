@@ -14,5 +14,5 @@ const plantSchema = new Schema({
   img: { type: String}
 });
 
-module.exports = mongoose.model("plant", plantSchema);
+module.exports = mongoose.model("plantdb", plantSchema);
 
