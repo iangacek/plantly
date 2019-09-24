@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import Navbar from "./components/Navbar/navbar"; 
 import Explore from "./components/Explore/explore"; 
 import Search from "./components/Search/search";

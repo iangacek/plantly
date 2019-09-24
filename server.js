@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -23,9 +24,10 @@ mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
+mongoose.set('useCreateIndex', true);
 
 // Define API routes here
-// app.use(routes);
+app.use(routes);
 
 // Treffle API plant search request
 // app.get("/API-search/:plantSearch", (req, res) => {
@@ -49,12 +51,28 @@ mongoose.connect(MONGODB_URI, {
 
 // Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
-  db.plant.find().then(plants => res.json(plants));
+  console.log("anyone here?")
+  try{
+  db.plant.find({}).then(plants => {
+    res.json(plants);
+    console.log(plants)
+  })} catch(err) {
+    console.log(err);
+  }
 });
+// app.get("/plantly-explore", (req, res) => {
+//   console.log(res);
+// // db.plant.find({}, function(err, docs) {
+// //   if (!err){ 
+// //       console.log(docs);
+// //       process.exit();
+// //   } else {throw err;}
+// // })
+// });
 
 // Plantly database API route
 app.get("/plantly-search/:plantName", (req, res) => {
-  console.log(req.params.plantName)
+  console.log(req.params.plantName);
   db.plant.find({ commonName: { "$regex": req.params.plantName, "$options": "i" } }).then(plants => res.json(plants));
 });
 
