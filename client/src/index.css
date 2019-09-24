@@ -6,10 +6,31 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+
+html {
+  font-size: 300%; }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 300%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 52.5em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
+  @media only screen and (max-width: 33em) {
+    html {
+      font-size: 29%; } }
+  @media only screen and (max-width: 25.5em) {
+    html {
+      font-size: 20%; } }
 
 .home {
-  font-size: 50px;
   color: white;
   font-family: 'Encode Sans Expanded', sans-serif;
   text-align: center; }
@@ -19,6 +40,10 @@ body {
   color: white;
   font-family: 'Encode Sans Expanded', sans-serif;
   text-align: center; }
+
+.button {
+  border: none;
+  color: white; }
 
 .description {
   font-weight: bold; }

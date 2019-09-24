@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:100&display=swap');
+@mixin responsive($breakpoint) {
+    @if $breakpoint == mini {
+      @media only screen and (max-width: 25.5em) { @content }; //
+    }
 
+    @if $breakpoint == mid-mini {
+      //em number calculated by dividing the amount of px by default font size (16px) 
+      @media only screen and (max-width: 33em) { @content }; // 
+    }
+
+    @if $breakpoint == phone {
+      //em number calculated by dividing the amount of px by default font size (16px) 
+      @media only screen and (max-width: 100em) { @content }; //600px 
+    }
+  
+    @if $breakpoint == t-port {
+      @media only screen and (max-width: 52.5em) { @content }; //900px
+    }
+  
+    @if $breakpoint == t-land {
+      @media only screen and (max-width: 75em) { @content }; //1200px
+    }
+
+    @if $breakpoint == t-view {
+      @media only screen and (max-width: 93em) { @content }; 
+    }
+  
+    @if $breakpoint == l-desk {
+      @media only screen and (min-width: 112.5em) { @content }; //1800px
+    }
+  }
+  @mixin center-element {
+    position: absolute;
+    // left: 50%;
+    // top: 50%;
+    transform: translate(-50%, -50%);
+  }
 body{
     margin:0;   
     background-color: white;
@@ -8,51 +44,39 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    @mixin for-phone-only {
-        @media (max-width: 599px) { @content; }
-      }
-      @mixin for-tablet-portrait-up {
-        @media (min-width: 600px) { @content; }
-      }
-      @mixin for-tablet-landscape-up {
-        @media (min-width: 900px) { @content; }
-      }
-      @mixin for-desktop-up {
-        @media (min-width: 1200px) { @content; }
-      }
-      @mixin for-big-desktop-up {
-        @media (min-width: 1800px) { @content; }
-      }
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  
 }
 
 
-// html {
-//     font-size: 62.5%;
-//     @include responsive(l-desk) {
-//       font-size: 75%; //1rem = 12px 12/16 = 75%
-//     }
+html {
+    font-size:300%%;
+    @include responsive(l-desk) {
+      font-size:300%; //1rem = 12px 12/16 = 75%
+    }
   
-//     @include responsive(t-land) { // width < 1200?
-//       font-size: 56.25%; //1rem = 9px 9/16 = 56.25%
-//     }
+    @include responsive(t-land) { // width < 1200?
+      font-size: 56.25%; //1rem = 9px 9/16 = 56.25%
+    }
   
-//     @include responsive(t-port) { // width < 900?
-//       font-size: 50%; //1rem = 8px 8/16 = 50%
-//     }
+    @include responsive(t-port) { // width < 900?
+      font-size: 50%; //1rem = 8px 8/16 = 50%
+    }
   
-//     @include responsive(phone) { // width < 600?
-//       font-size: 37.5%; //1rem = 6px 6/16 = 37.5%
-//     }
-//     @include responsive(mid-mini) { //
-//       font-size: 29%; //
-//     }
-//     @include responsive(mini) { //
-//       font-size: 20%; //
-//     }
-// }
+    @include responsive(phone) { // width < 600?
+      font-size:200%; //1rem = 6px 6/16 = 37.5%
+      color:red;
+    }
+    @include responsive(mid-mini) { //
+      font-size: 29%; //
+    }
+    @include responsive(mini) { //
+      font-size: 20%; //
+    }
+}
 
 .home {
-    font-size: 50px;
+    // font-size: 50px;
     color: white;
     font-family: 'Encode Sans Expanded', sans-serif;
     text-align: center;
@@ -68,8 +92,8 @@ body{
 }
 
 .button {
-    // border: none;
-    // color: white;
+     border: none;
+     color: white;
     // padding: 16px 32px;
     // text-decoration: none;
     // margin: 4px 2px;
