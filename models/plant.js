@@ -13,5 +13,6 @@ const plantSchema = new Schema({
   // img: { type: String}
 });
 
+// should this be "plant" or "plantdb" as the export name?
 module.exports = mongoose.model("plant", plantSchema);
 

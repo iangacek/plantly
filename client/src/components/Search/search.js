@@ -2,6 +2,7 @@ import React from "react";
 import API from "../../API/API.js";
 import PlantCard from "../Plant Card/PlantCard";
 
+// Plant-form submit button
 class Search extends React.Component {
   state = {
     searchTerm: "",
@@ -11,7 +12,7 @@ class Search extends React.Component {
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value,
+      name: value,
     });
   };
 
