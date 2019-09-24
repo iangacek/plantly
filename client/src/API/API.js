@@ -3,7 +3,7 @@ const axios = require("axios"); // Queries api
 export default {
 
     findAllPlants: () => {
-        console.log('api.findallPlants()')
+        console.log('api.findAllPlants()')
         return axios.get("/plantly-explore")
     },
 
