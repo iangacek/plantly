@@ -27,7 +27,7 @@ mongoose.connect(MONGODB_URI, {
 mongoose.set('useCreateIndex', true);
 
 // Define API routes here
-app.use(routes);
+// app.use(routes);
 
 // Treffle API plant search request
 // app.get("/API-search/:plantSearch", (req, res) => {
@@ -60,15 +60,6 @@ app.get("/plantly-explore", (req, res) => {
     console.log(err);
   }
 });
-// app.get("/plantly-explore", (req, res) => {
-//   console.log(res);
-// // db.plant.find({}, function(err, docs) {
-// //   if (!err){ 
-// //       console.log(docs);
-// //       process.exit();
-// //   } else {throw err;}
-// // })
-// });
 
 // Plantly database API route
 app.get("/plantly-search/:plantName", (req, res) => {
@@ -86,6 +77,6 @@ app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
 
-// Creates initial plant-database from plantlyAPI.json
+// Creates initial plant-database
 // var plantdb = require("./plantlyAPI.json")
 // db.plant.create(plantdb).then(plant => console.log(plant));

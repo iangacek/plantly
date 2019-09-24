@@ -9,9 +9,9 @@ const plantSchema = new Schema({
   soil: { type: String},
   water: { type: String},
   fertilizer: { type: String},
-  petToxicity: { type: String},
-  img: { type: String}
+  petToxicity: { type: String}
+  // img: { type: String}
 });
 
-module.exports = mongoose.model("plantdb", plantSchema);
+module.exports = mongoose.model("plant", plantSchema);
 
