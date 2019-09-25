@@ -20,6 +20,15 @@ class PlantCard extends Component {
       </div>
     );
   }
+
+  formSubmit = event => {
+    event.preventDefault();
+    API.searchPlants(this.state.searchTerm).then(plantData =>
+      this.setState({
+        plants: plantData.data,
+      })
+    );
+  };
 }
 
 export default PlantCard;
