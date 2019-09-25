@@ -10,6 +10,10 @@ export default {
     searchPlants: (term) => {
         console.log('api.searchPlants(' + term + ")")
         return axios.get("/plantly-search/" + term)
+    },
+
+    addToGarden: (term) => {
+        return axios.get()
     }
 };
   
