@@ -4,6 +4,7 @@ const app = express();
 const axios = require("axios");
 const fs = require("fs"); // Require File System data in .JSON
 const db = require("./models"); // Requires plant schema in models folder
+require("dotenv").config() ;
 // Set server-port to 3001
 const PORT = process.env.PORT || 3001;
 // Define middleware here
@@ -67,6 +68,3 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
-// Creates initial plant-database
-var plantdb = require("./plantlyAPI.json")
-db.plant.create(plantdb).then(plant => console.log(plant));
