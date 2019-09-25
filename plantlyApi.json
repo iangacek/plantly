@@ -5,10 +5,11 @@
     "scientificName": "Monstera Deliciosa",
     "propagation": "Cuttings",
     "light": "Bright Indirect",
-    "soil": "n/a",
+    "soil": "",
     "water": "When soil is dry",
     "fertilizer": "Once a month, Spring and Summer",
-    "petToxicity": "Mildy Toxic"
+    "petToxicity": "Mildy Toxic",
+    "img": "https://images.unsplash.com/photo-1545241047-6083a3684587?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "soil": "Well Draining",
     "water": "Allow soil to fully dry out between watering",
     "fertilizer": "",
-    "petToxicity": "Toxic"
+    "petToxicity": "Toxic",
+    "img": "https://images.unsplash.com/photo-1530282436131-cf3b76623184?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "soil": "Well draining",
     "water": "Keep soil moist during growing season, allow to dry our when dormant.",
     "fertilizer": "Monthly, Spring and Summer",
-    "petToxicity": "Mildy Toxic"
+    "petToxicity": "Mildy Toxic",
+    "img": "https://images.unsplash.com/photo-1564625213210-35277d0332a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=336&q=80"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "soil": "Well draining that still retains some moisture",
     "water": "Keep soil moist during growing season, allow to dry our when dormant. Maintain a regular watering schedule.",
     "fertilizer": "Half-strength all purpose fertilizer once per month in Spring and Summer.",
-    "petToxicity": "Toxic"
+    "petToxicity": "Toxic",
+    "img": ""
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "soil": "Excellent drainage",
     "water": "Often in summer, monthly in winter. Only water until soil is moist.",
     "fertilizer": "Weekly during growing season",
-    "petToxicity": "Toxic"
+    "petToxicity": "Toxic",
+    "img": ""
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@
     "soil": "",
     "water": "Keep roots submersed in water, change water occasionally.",
     "fertilizer": "",
-    "petToxicity": "Toxic"
+    "petToxicity": "Toxic",
+    "img": "https://images-eu.ssl-images-amazon.com/images/I/51bsKJ60ZML.jpg"
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
     "soil": "Sandy, well-draining",
     "water": "Allow soil to dry out, then water deeply. Water less frequently in the winter.",
     "fertilizer": "Liquid fertilizer Monthly in Spring and early Summer.",
-    "petToxicity": "Toxic"
+    "petToxicity": "Toxic",
+    "img": ""
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
     "soil": "Mix of sandy and peat moss soil",
     "water": "Water thoroughly when the top 2-4 inches of soil are dry.",
     "fertilizer": "Half-strength liquid fertilizer in Spring, Summer and Fall.",
-    "petToxicity": "Non-toxic"
+    "petToxicity": "Non-toxic",
+    "img": ""
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@
     "soil": "Well-draining with some moisture retention",
     "water": "Keep soil moist but be careful not to overwater. Peace lily's are sensitive to chemicals found in tap water, so it is best to water with filtered water.",
     "fertilizer": "Fertilize sparingly, only about every 6 weeks in Spring and Summer.",
-    "petToxicity": "Highly Toxic"
+    "petToxicity": "Highly Toxic",
+    "img": ""
   },
   {
     "id": 10,
@@ -107,7 +116,8 @@
     "soil": "Sandy soil mix with good drainage.",
     "water": "Water when the top inch of soil is dry. Be careful not to overwater as that may cause root and rhizome rot.",
     "fertilizer": "Liquid fertilizer once per month in Spring, Summer and Fall.",
-    "petToxicity": "Toxic"
+    "petToxicity": "Toxic",
+    "img": ""
   },
   {
     "id": 11,
@@ -118,7 +128,8 @@
     "soil": "All purpose mix",
     "water": "Keep soil lightly damp",
     "fertilizer": "Liquid fertilizer every two weeks in Spring and Summer",
-    "petToxicity": "Toxic"
+    "petToxicity": "Toxic",
+    "img": ""
   },
   {
     "id": 12,
@@ -129,7 +140,8 @@
     "soil": "Houseplant soil mix, well draining.",
     "water": "Water well when top inch of soil is dry.",
     "fertilizer": "Monthly during Spring and Summer.",
-    "petToxicity": "Mildly toxic"
+    "petToxicity": "Mildly toxic",
+    "img": "https://images.unsplash.com/photo-1507746212228-2d3645cbeb56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=295&q=80"
   },
   {
     "id": 13,
@@ -140,7 +152,8 @@
     "soil": "Well drained",
     "water": "Keep soil moist in Spring and Summer, allow to dry out between watering in Fall and Winter.",
     "fertilizer": "Twice per month in Spring and Summer",
-    "petToxicity": "Non-toxic"
+    "petToxicity": "Non-toxic",
+    "img": ""
   },
   {
     "id": 14,
@@ -151,7 +164,8 @@
     "soil": "Cacti and succulent soil mix",
     "water": "Allow soil to dry inbetween watering",
     "fertilizer": "Half-strength liquid fertilizer once in the Spring and Once in the Summer.",
-    "petToxicity": "Non-toxic"
+    "petToxicity": "Non-toxic",
+    "img": "https://images.unsplash.com/photo-1511974722086-bf4a32873015?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80"
   },
   {
     "id": 15,
@@ -162,6 +176,128 @@
     "soil": "Well draining potting mix",
     "water": "Water when the top 2-3 inches of soil is dry",
     "fertilizer": "Diluted fertilizer approximately every two weeks in Spring and Summer",
-    "petToxicity": "Toxic"
+    "petToxicity": "Toxic",
+    "img": ""
+  },
+  {
+    "id": 16,
+    "commonName": "Yucca, Spineless Yucca",
+    "scientificName": "Yucca elephantipes",
+    "propagation": "Offset division, rhizome division",
+    "light": "Bright indirect light",
+    "soil": "Well draining, heavy, soil with some water retaining properties. Some sources recommend a 3:1 mixture of peat and sand.",
+    "water": "Yucca is a drought tolerant plant. Allow the top half of the soil to dry before watering thoroughly. Be careful not to overwater.",
+    "fertilizer": "",
+    "petToxicity": "Toxic",
+    "img": ""
+  },
+  {
+    "id": 17,
+    "commonName": "Air Plant",
+    "scientificName": "Tillandsia",
+    "propagation": "Offset division",
+    "light": "Bright filtred light",
+    "soil": "Air plants do not require soil",
+    "water": "Submerge in filtered water for 2-3 hours once every two weeks, or mist lightly every few days. Use filtered water or rain water, as air plants are sensitive to cholorine and other additives found in tap water.",
+    "fertilizer": "Use a liquid fertilizer specifically formulated for air plants.",
+    "petToxicity": "Non-toxic",
+    "img": "https://images.unsplash.com/photo-1548663176-a551733d8262?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+  },
+  {
+    "id": 18,
+    "commonName": "Dragon Tree",
+    "scientificName": "Dracaena marginata",
+    "propagation": "Stem Cuttings",
+    "light": "Bright indirect light",
+    "soil": "All purpose potting mix",
+    "water": "Keep the soil slightly moist, do not overwater.",
+    "fertilizer": "Fertilize in Spring and Summer",
+    "petToxicity": "Toxic",
+    "img": ""
+  },
+  {
+    "id": 19,
+    "commonName": "Prayer Plant",
+    "scientificName": "Maranta leuconeura",
+    "propagation": "Leaf cuttings",
+    "light": "Medium filtered light",
+    "soil": "Well draining",
+    "water": "Keep soil barely moist, prefers high humidity",
+    "fertilizer": "Once or twice per year in the Spring or Summer",
+    "petToxicity": "Non-toxic",
+    "img": ""
+  },
+  {
+    "id": 20,
+    "commonName": "Ponytail Palm",
+    "scientificName": "Beaucarnea recurvata",
+    "propagation": "Offsets",
+    "light": "Full sun, bright filtered light",
+    "soil": "Sandy",
+    "water": "Allow soil to dry between watering.",
+    "fertilizer": "Use succulent fertilizer in the summer",
+    "petToxicity": "Non-toxic",
+    "img": ""
+  },
+  {
+    "id": 21,
+    "commonName": "Christmas Cactus",
+    "scientificName": "Schlumbergera",
+    "propagation": "Leaf cuttings",
+    "light": "Bright indirect light",
+    "soil": "Well draining",
+    "water": "Allow top one inch of soil to dry between watering, then water thoroughly. Do not overwater.",
+    "fertilizer": "Fertilize 2-4 times per year in Spring and early Summer",
+    "petToxicity": "Non-toxic",
+    "img": ""
+  },
+  {
+    "id": 22,
+    "commonName": "Umbrella Plant",
+    "scientificName": "Schefflera arboricola",
+    "propagation": "Stem cuttings",
+    "light": "Bright-indirect light or direct sun (while indoors only)",
+    "soil": "Potting mix",
+    "water": "Water thoroughly after the top two inches of soil have dried out.",
+    "fertilizer": "Once per month during the summer.",
+    "petToxicity": "Non-toxic",
+    "img": ""
+  },
+  {
+    "id": 23,
+    "commonName": "Common Ivy, English Ivy",
+    "scientificName": "Hedera helix",
+    "propagation": "Stem cuttings",
+    "light": "Low-light to filtered bright light",
+    "soil": "Rich potting mix",
+    "water": "Keep soil moist",
+    "fertilizer": "Fertilize monthly",
+    "petToxicity": "Toxic",
+    "img": "https://images.unsplash.com/photo-1486057827834-ea1fe005e511?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+  },
+  {
+    "id": 24,
+    "commonName": "Asparagus Fern",
+    "scientificName": "Asparagus aethiopicus",
+    "propagation": "Tuber division",
+    "light": "Idirect light to low light",
+    "soil": "Well-draining potting soil",
+    "water": "Keep the soil moist. The asparagus fern prefers high humidity, mist leaves often.",
+    "fertilizer": "Fertilize bi-weekly during the Summer and monthly the rest of the year with a liquid fertilizer.",
+    "petToxicity": "Toxic",
+    "img": ""
+  },
+  {
+    "id": 25,
+    "commonName": "Parlor Palm",
+    "scientificName": "Chamaedora elegans",
+    "propagation": "Seed",
+    "light": "Low to medium filtered light",
+    "soil": "High quality potting soil",
+    "water": "Keep soil barely moist, do not overwater",
+    "fertilizer": "Liquid fertilizer once per year in the Spring",
+    "petToxicity": "Non-toxic",
+    "img": ""
   }
+
 ]

@@ -9,10 +9,10 @@ const plantSchema = new Schema({
   soil: { type: String},
   water: { type: String},
   fertilizer: { type: String},
-  petToxicity: { type: String}
-  // img: { type: String}
+  petToxicity: { type: String},
+  img: { type: String}
 });
 
 // should this be "plant" or "plantdb" as the export name?
-module.exports = mongoose.model("plant", plantSchema);
+module.exports = mongoose.model("plantdb", plantSchema);
 

@@ -2,6 +2,7 @@ const express = require("express");
 var mongoose = require("mongoose");
 const app = express();
 const db = require("./models"); // Requires plant schema in models folder
+require('dotenv').config()
 const PORT = process.env.PORT || 3001; // Set server-port to 3001
 
 // Define middleware here
@@ -18,7 +19,7 @@ mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
-mongoose.set("useCreateIndex", true);
+// mongoose.set("useCreateIndex", true);
 
 // Define API routes here
 // Treffle API plant search request
@@ -42,7 +43,6 @@ mongoose.set("useCreateIndex", true);
 
 // Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
-  console.log("Entire list of plants should populate here");
   try {
     db.plant.find({}).then(plants => {
       res.json(plants);
@@ -52,6 +52,11 @@ app.get("/plantly-explore", (req, res) => {
     console.log(err);
   }
 });
+// app.get("/plantly-explore", (req, res) => {
+//   db.collection("plantdb").findAll({})
+//     .then(plants => res.json(plants));
+// });
+
 // Plantly database API route
 app.get("/plantly-search/:plantName", (req, res) => {
   console.log(req.params.plantName);
