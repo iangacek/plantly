@@ -20,6 +20,7 @@ mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
 });
 mongoose.set("useCreateIndex", true);
+
 // Define API routes here
 // Treffle API plant search request
 // app.get("/API-search/:plantSearch", (req, res) => {
