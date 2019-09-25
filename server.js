@@ -65,7 +65,3 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
-
-// Creates initial plant-database from plantlyAPI.json
-// var plants = require("./plantlyAPI.json")
-// db.plant.create(plants).then(plant => console.log(plant));
