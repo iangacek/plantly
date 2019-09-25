@@ -19,8 +19,7 @@ mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
-// mongoose.set("useCreateIndex", true);
-
+mongoose.set("useCreateIndex", true);
 // Define API routes here
 // Treffle API plant search request
 // app.get("/API-search/:plantSearch", (req, res) => {
@@ -43,6 +42,7 @@ mongoose.connect(MONGODB_URI, {
 
 // Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
+  console.log("Entire list of plants should populate here");
   try {
     db.plant.find({}).then(plants => {
       res.json(plants);
