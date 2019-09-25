@@ -14,7 +14,7 @@ class PlantCard extends Component {
           <p>Propagation:{plant.propagation}</p>
           <p>Fertilizing:{plant.fertilizer}</p>
           <p>Pet Toxicity:{plant.petToxicity}</p>
-          <deleteButton />
+          {/* <deleteButton /> */}
         </div>
       </div>
     );

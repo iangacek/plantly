@@ -16,6 +16,7 @@ if (process.env.NODE_ENV === "production") {
 }
 // References MongoDB database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/plantly";
+process.env.MONGODB_URI || 
 mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
@@ -68,5 +69,5 @@ app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
 // Creates initial plant-database
-var plantdb = require("./plantlyAPI.json")
-db.plant.create(plantdb).then(plant => console.log(plant));
+// var plantdb = require("./plantlyAPI.json")
+// db.plant.create(plantdb).then(plant => console.log(plant));
