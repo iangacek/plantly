@@ -70,22 +70,28 @@ app.get("/plantly-search/:plantName", (req, res) => {
 app.post("/submit", function(req, res) {
   // Save the request body as an object called plant
   var plant = req.body;
-
-  db.plantdb.save(plant, function(error, saved) {
+  console.log("plant data: ", req.body);
+  db.plantdb.create(plant, function(error, saved) {
     if (error) {
-      console.log(error);
+      res.send(error)
     } else {
       res.send(saved);
       console.log("Submit hit!");
     }
   });
-
-
 });
 
 // Delete plant from mongo database
 app.delete("/delete", function(req, res) {
-  console.log("Delete hit!");
+    console.log("plant data: ", req.body);
+    db.plantdb.delete(plant, function(error, deleted) {
+      if (error) {
+        res.send(error)
+      } else {
+        res.send(deleted);
+        console.log("Delete hit!");
+      }
+    });
 });
 
 // Default route to index.html

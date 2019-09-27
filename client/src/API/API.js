@@ -12,7 +12,11 @@ export default {
   },
 
   // Saves a plant to the database
-  savePlant: function(plantData) {
+  savePlant: (plantData) =>{
+    console.log("savePlant hit!")
     return axios.post("/submit", plantData);
   },
+
+  // deletePlant: 
+
 };
