@@ -6,7 +6,7 @@ import Explore from "./components/Explore/explore";
 import Search from "./components/Search/search";
 import Home from "./components/Home/home";
 import myGarden from "./components/MyGarden/myGarden";
-import PlantEntry from "./components/MyGarden/plantEntry";
+import PlantEntry from "./components/PlantEntry/plantEntry";
 
 class App extends Component {
 
