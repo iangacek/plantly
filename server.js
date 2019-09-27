@@ -6,7 +6,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const passport = require('./passport');
 const app = express();
-const db = require("./models"); // Requires plant schema in models folder
+const db = require("./models"); // Requires schemas in models folder
 // Set server-port to 3001
 const PORT = process.env.PORT || 3001;
 
@@ -36,7 +36,8 @@ mongoose.connect(MONGODB_URI, {
 app.use(
 	session({
 		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
-		store: new MongoStore({ mongooseConnection: dbConnection }),
+    store: new MongoStore({ mongooseConnection: db }),
+    //problem maybe above, no database connection in outside folder, only above in this file
 		resave: false, //required
 		saveUninitialized: false //required
 	})
