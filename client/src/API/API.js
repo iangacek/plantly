@@ -13,8 +13,7 @@ export default {
     },
 
     addToGarden: (id) => {
-        console.log(id)
-        console.log("test")
-        return axios.create("/api/books/" + id);
+        console.log(id.props.plant)
+        return axios.get("/plantly-addToGarden" + id.props.plant);
     }
 };
