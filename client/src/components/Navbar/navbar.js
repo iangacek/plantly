@@ -5,18 +5,18 @@ import "../../index.css"
 
 function Navbar (){
   return (
-    <nav class ="navbar">
-      <ul class = "nav">
-        <h1 class ="title">
+    <nav className ="navbar">
+      <ul className = "nav">
+        <h1 className ="title">
           <p>plantly</p>
         </h1>
-        <li class = "list">
+        <li className = "list">
             <Link to={"/explore"}>Explore</Link>
         </li>
-        <li class = "list">
+        <li className = "list">
             <Link to={"/myGarden"}>My Garden</Link>
         </li>
-        <li class = "list">
+        <li className = "list">
             <Link to={"/search"}>Search</Link>
         </li>
       </ul>

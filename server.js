@@ -1,8 +1,6 @@
 const express = require("express");
 var mongoose = require("mongoose");
 const app = express();
-const axios = require("axios");
-const fs = require("fs"); // Require File System data in .JSON
 const db = require("./models"); // Requires plant schema in models folder
 require("dotenv").config();
 
@@ -70,20 +68,19 @@ app.get("/plantly-search/:plantName", (req, res) => {
 
 // Post plant to the mongo database
 app.post("/submit", function(req, res) {
-  console.log("Submit hit!");
   // Save the request body as an object called plant
   var plant = req.body;
-
-  // Automatically puts inGarden status to true
-  plant.inGarden = true;
 
   db.plantdb.save(plant, function(error, saved) {
     if (error) {
       console.log(error);
     } else {
       res.send(saved);
+      console.log("Submit hit!");
     }
   });
+
+
 });
 
 // Delete plant from mongo database
