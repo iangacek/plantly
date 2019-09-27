@@ -12,11 +12,8 @@ export default {
         return axios.get("/plantly-search/" + term)
     },
 
-    addToGarden: (term) => {
-        return axios.get()
+    addToGarden: (id) => {
+        console.log('api.addToGarden(' + id + ")")
+        return axios.create("/api/books/" + id);
     }
 };
-  
-
-
-

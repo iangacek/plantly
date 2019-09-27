@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../../API/API.js";
 
 class PlantCard extends Component {
   render() {
@@ -23,11 +24,8 @@ class PlantCard extends Component {
 
   formSubmit = event => {
     event.preventDefault();
-    API.searchPlants(this.state.searchTerm).then(plantData =>
-      this.setState({
-        plants: plantData.data,
-      })
-    );
+    API.addToGarden(this.formSubmit);
+    console.log("Test");
   };
 }
 

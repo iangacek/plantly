@@ -5,8 +5,10 @@ const axios = require("axios");
 const fs = require("fs"); // Require File System data in .JSON
 const db = require("./models"); // Requires plant schema in models folder
 require("dotenv").config() ;
+
 // Set server-port to 3001
 const PORT = process.env.PORT || 3001;
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -15,6 +17,7 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
 // References MongoDB database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/plantly";
 mongoose.connect(MONGODB_URI, {
@@ -22,6 +25,7 @@ mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
 });
 mongoose.set("useCreateIndex", true);
+
 // Define API routes here
 // Treffle API plant search request
 // app.get("/API-search/:plantSearch", (req, res) => {
@@ -41,6 +45,7 @@ mongoose.set("useCreateIndex", true);
 //   .then(data => {res.json(data.data)})
 //     .catch(err => res.json(err));
 // });
+
 // Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
   console.log("Entire list of plants should populate here");
@@ -53,6 +58,7 @@ app.get("/plantly-explore", (req, res) => {
     console.log(err);
   }
 });
+
 // Plantly database API route
 app.get("/plantly-search/:plantName", (req, res) => {
   console.log(req.params.plantName);
@@ -60,6 +66,15 @@ app.get("/plantly-search/:plantName", (req, res) => {
     .find({ commonName: { $regex: req.params.plantName, $options: "i" } })
     .then(plants => res.json(plants));
 });
+
+// Plantly Add To Garden route
+app.get("/plantly-addToGarden"), (req, res) => {
+  console.log("Added a plant to the database");
+  console.log(plant.id)
+  db.garden.create(req.body);
+  res.json(plants);
+};
+
 // Default route to index.html
 app.get("*", (req, res) => {
   // res.sendFile(path.join(__dirname, "./client/build/index.html"));
