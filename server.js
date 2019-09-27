@@ -66,19 +66,11 @@ app.get("/plantly-search/:plantName", (req, res) => {
     .then(plants => res.json(plants));
 });
 
-// Default route to index.html
-app.get("*", (req, res) => {
-  // res.sendFile(path.join(__dirname, "./client/build/index.html"));
-  res.json("Hello!");
-});
-app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-});
-
 // ================================= ADD-PLANT ROUTES =================================
 
 // Post plant to the mongo database
 app.post("/submit", function(req, res) {
+  console.log("Submit hit!");
   // Save the request body as an object called plant
   var plant = req.body;
 
@@ -95,7 +87,15 @@ app.post("/submit", function(req, res) {
 });
 
 // Delete plant from mongo database
-app.deleteOne("/delete", function(req,res){
+app.delete("/delete", function(req, res) {
+  console.log("Delete hit!");
+});
 
-
-})
+// Default route to index.html
+app.get("*", (req, res) => {
+  // res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.json("Hello!");
+});
+app.listen(PORT, () => {
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
+});

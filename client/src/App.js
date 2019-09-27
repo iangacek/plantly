@@ -6,6 +6,7 @@ import Explore from "./components/Explore/explore";
 import Search from "./components/Search/search";
 import Home from "./components/Home/home";
 import myGarden from "./components/MyGarden/myGarden";
+import PlantEntry from "./components/MyGarden/plantEntry";
 
 class App extends Component {
 
@@ -18,6 +19,7 @@ class App extends Component {
               <Route exact path="/explore" component={Explore} />
               <Route exact path="/search" component={Search} />
               <Route exact path="/myGarden" component={myGarden} />
+              <Route exact path="/myGarden/plantEntry" component={PlantEntry} />
             </Switch>
         </Router>
     );
