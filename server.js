@@ -1,27 +1,23 @@
 const express = require("express");
 var mongoose = require("mongoose");
 const app = express();
-const axios = require("axios");
-const fs = require("fs"); // Require File System data in .JSON
 const db = require("./models"); // Requires plant schema in models folder
+require('dotenv').config()
 // Set server-port to 3001
 const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // References MongoDB database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/plantly";
-process.env.MONGODB_URI || 
 mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
-mongoose.set("useCreateIndex", true);
 // Define API routes here
 // Treffle API plant search request
 // app.get("/API-search/:plantSearch", (req, res) => {

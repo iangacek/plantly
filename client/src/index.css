@@ -7,46 +7,20 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
-
-html {
-  font-size: 300%; }
-  @media only screen and (min-width: 112.5em) {
-    html {
-      font-size: 300%; } }
-  @media only screen and (max-width: 75em) {
-    html {
-      font-size: 56.25%; } }
-  @media only screen and (max-width: 52.5em) {
-    html {
-      font-size: 50%; } }
-  @media only screen and (max-width: 37.5em) {
-    html {
-      font-size: 37.5%; } }
-  @media only screen and (max-width: 33em) {
-    html {
-      font-size: 29%; } }
-  @media only screen and (max-width: 25.5em) {
-    html {
-      font-size: 20%; } }
+  font-family: 'Encode Sans Expanded', sans-serif; }
 
 .home {
   color: white;
   font-family: 'Encode Sans Expanded', sans-serif;
   text-align: center; }
+  .home .description {
+    font-weight: bold; }
 
 .search-container {
   font-size: 50px;
   color: white;
   font-family: 'Encode Sans Expanded', sans-serif;
   text-align: center; }
-
-.button {
-  border: none;
-  color: white; }
-
-.description {
-  font-weight: bold; }
 
 .navbar {
   border-bottom: 3px solid #dddddd;
@@ -56,18 +30,26 @@ html {
   height: 225px;
   display: grid;
   grid-area: header; }
-
-.nav {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px; }
-
-a {
-  color: grey; }
+  .navbar .nav {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px; }
+    .navbar .nav .title {
+      margin-top: 0px;
+      display: inline-block;
+      width: 250px;
+      height: 100px;
+      font-family: 'Encode Sans Expanded', sans-serif;
+      font-size: 125px;
+      font-weight: 200;
+      line-height: 0px;
+      color: grey;
+      text-align: center;
+      text-decoration: none; }
 
 .list {
   color: grey;
@@ -75,25 +57,42 @@ a {
   float: right;
   width: 200px;
   font-family: 'Encode Sans Expanded', sans-serif;
-  font-size: 25px;
   font-weight: 200;
   line-height: 320px;
   text-align: center;
   text-decoration: none; }
-
-.title {
-  margin-top: 0px;
-  display: inline-block;
-  width: 250px;
-  height: 100px;
-  font-family: 'Encode Sans Expanded', sans-serif;
-  font-size: 125px;
-  font-weight: 200;
-  line-height: 0px;
-  color: grey;
-  text-align: center;
-  text-decoration: none; }
+  .list a {
+    color: grey; }
 
 .item {
-  font-size: 25px;
-  color: black; }
+  color: white; }
+
+.home {
+  font-size: 300%; }
+  @media only screen and (min-width: 112.5em) {
+    .home {
+      font-size: 300%; } }
+  @media only screen and (max-width: 100em) {
+    .home {
+      font-size: 200%;
+      color: red; } }
+
+.title {
+  font-size: 300%; }
+  @media only screen and (min-width: 112.5em) {
+    .title {
+      font-size: 300%; } }
+  @media only screen and (max-width: 100em) {
+    .title {
+      font-size: 200%;
+      color: red; } }
+
+.list {
+  font-size: 180%; }
+  @media only screen and (min-width: 112.5em) {
+    .list {
+      font-size: 150%; } }
+  @media only screen and (max-width: 100em) {
+    .list {
+      font-size: 200%;
+      color: red; } }
