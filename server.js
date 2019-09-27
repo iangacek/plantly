@@ -4,9 +4,11 @@ const app = express();
 const axios = require("axios");
 const fs = require("fs"); // Require File System data in .JSON
 const db = require("./models"); // Requires plant schema in models folder
-require("dotenv").config() ;
+require("dotenv").config();
+
 // Set server-port to 3001
 const PORT = process.env.PORT || 3001;
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -22,7 +24,8 @@ mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
 });
 mongoose.set("useCreateIndex", true);
-// Define API routes here
+
+// ================================= API ROUTES =================================
 // Treffle API plant search request
 // app.get("/API-search/:plantSearch", (req, res) => {
 //   console.log('endpoint hit');
@@ -41,6 +44,7 @@ mongoose.set("useCreateIndex", true);
 //   .then(data => {res.json(data.data)})
 //     .catch(err => res.json(err));
 // });
+
 // Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
   console.log("Entire list of plants should populate here");
@@ -53,6 +57,7 @@ app.get("/plantly-explore", (req, res) => {
     console.log(err);
   }
 });
+
 // Plantly database API route
 app.get("/plantly-search/:plantName", (req, res) => {
   console.log(req.params.plantName);
@@ -60,6 +65,7 @@ app.get("/plantly-search/:plantName", (req, res) => {
     .find({ commonName: { $regex: req.params.plantName, $options: "i" } })
     .then(plants => res.json(plants));
 });
+
 // Default route to index.html
 app.get("*", (req, res) => {
   // res.sendFile(path.join(__dirname, "./client/build/index.html"));
@@ -68,3 +74,28 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
+
+// ================================= ADD-PLANT ROUTES =================================
+
+// Post plant to the mongo database
+app.post("/submit", function(req, res) {
+  // Save the request body as an object called plant
+  var plant = req.body;
+
+  // Automatically puts inGarden status to true
+  plant.inGarden = true;
+
+  db.plantdb.save(plant, function(error, saved) {
+    if (error) {
+      console.log(error);
+    } else {
+      res.send(saved);
+    }
+  });
+});
+
+// Delete plant from mongo database
+app.deleteOne("/delete", function(req,res){
+
+
+})
