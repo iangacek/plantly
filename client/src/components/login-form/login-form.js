@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
-​
+
 class LoginForm extends Component {
     constructor() {
         super()
@@ -14,17 +14,17 @@ class LoginForm extends Component {
         this.handleChange = this.handleChange.bind(this)
   
     }
-​
+
     handleChange(event) {
         this.setState({
             [event.target.name]: event.target.value
         })
     }
-​
+
     handleSubmit(event) {
         event.preventDefault()
         console.log('handleSubmit')
-​
+
         axios
             .post('/user/login', {
                 username: this.state.username,
@@ -50,7 +50,7 @@ class LoginForm extends Component {
                 
             })
     }
-​
+
     render() {
         if (this.state.redirectTo) {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
@@ -102,5 +102,5 @@ class LoginForm extends Component {
         }
     }
 }
-​
+
 export default LoginForm

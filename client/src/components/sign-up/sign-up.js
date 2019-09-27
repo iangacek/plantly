@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-​
+
 class Signup extends Component {
 	constructor() {
 		super()
@@ -8,7 +8,7 @@ class Signup extends Component {
 			username: '',
 			password: '',
 			confirmPassword: '',
-​
+
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
@@ -22,7 +22,7 @@ class Signup extends Component {
 		console.log('sign-up handleSubmit, username: ')
 		console.log(this.state.username)
 		event.preventDefault()
-​
+
 		//request to server to add a new username/password
 		axios.post('/user/', {
 			username: this.state.username,
@@ -41,11 +41,11 @@ class Signup extends Component {
 			}).catch(error => {
 				console.log('signup error: ')
 				console.log(error)
-​
+
 			})
 	}
-​
-​
+
+
 render() {
 	return (
 		<div className="SignupForm">
@@ -90,9 +90,9 @@ render() {
 				</div>
 			</form>
 		</div>
-​
+
 	)
 }
 }
-​
+
 export default Signup
