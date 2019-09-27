@@ -68,12 +68,12 @@ app.get("/plantly-search/:plantName", (req, res) => {
 });
 
 // Plantly Add To Garden route
-app.get("/plantly-addToGarden:id"), (req, res) => {
+app.get("/plantly-addToGarden", (req, res) => {
   console.log("Added a plant to your garden");
-  console.log(plant.id)
-  db.garden.create(req.body);
-  res.json(plants);
-};
+  // console.log(req.params.plant)
+  // db.garden.create(req.body);
+  // res.json(plants);
+});
 
 // Default route to index.html
 app.get("*", (req, res) => {

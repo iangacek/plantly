@@ -14,6 +14,6 @@ export default {
 
     addToGarden: (id) => {
         console.log(id.props.plant)
-        return axios.get("/plantly-addToGarden" + id.props.plant);
+        return axios.get("/plantly-addToGarden")
     }
 };
