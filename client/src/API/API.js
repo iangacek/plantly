@@ -13,7 +13,8 @@ export default {
     },
 
     addToGarden: (id) => {
-        console.log('api.addToGarden(' + id + ")")
+        console.log(id)
+        console.log("test")
         return axios.create("/api/books/" + id);
     }
 };

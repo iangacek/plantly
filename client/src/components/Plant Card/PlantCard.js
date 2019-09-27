@@ -24,8 +24,7 @@ class PlantCard extends Component {
 
   formSubmit = event => {
     event.preventDefault();
-    API.addToGarden(this.formSubmit);
-    console.log("Test");
+    API.addToGarden(this);
   };
 }
 
