@@ -45,7 +45,6 @@ mongoose.set("useCreateIndex", true);
 
 // Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
-  console.log("Entire list of plants should populate here");
   try {
     db.plantdb.find({}).then(plants => {
       res.json(plants);
@@ -76,6 +75,7 @@ app.post("/submit", function(req, res) {
       res.send(error)
     } else {
       res.send(saved);
+      console.log('saved=======', saved)
       console.log("Submit hit!");
     }
   });
