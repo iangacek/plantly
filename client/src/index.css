@@ -28,6 +28,12 @@ body {
   font-family: 'Encode Sans Expanded', sans-serif;
   text-align: center; }
 
+.plantCard {
+  font-weight: bold; }
+
+h3 {
+  font-style: italic; }
+
 .navbar {
   border-bottom: 3px solid #dddddd;
   border-top: 3px solid #dddddd;
@@ -72,6 +78,52 @@ body {
 
 .item {
   color: white; }
+
+.login {
+  text-align: center; }
+  .login h4 {
+    font-size: 50px;
+    color: #555555;
+    font-weight: bold; }
+  .login form {
+    font-size: 25px; }
+  .login button {
+    border-radius: 8px;
+    font-size: 20px; }
+  .login button:hover {
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    background-color: grey;
+    /* Green */
+    color: white; }
+  .login a {
+    color: grey;
+    font-size: 20px; }
+
+.SignupForm {
+  text-align: center; }
+  .SignupForm h4 {
+    font-size: 50px;
+    color: #555555;
+    font-weight: bold; }
+  .SignupForm form {
+    font-size: 25px; }
+  .SignupForm button {
+    border-radius: 8px;
+    font-size: 20px; }
+  .SignupForm button:hover {
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    background-color: grey;
+    /* Green */
+    color: white; }
+  .SignupForm a {
+    color: grey;
+    font-size: 20px; }
 
 .home {
   font-size: 300%; }

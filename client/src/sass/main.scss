@@ -52,9 +52,15 @@ body{
     color: rgb(85, 85, 85);
     font-family: 'Encode Sans Expanded', sans-serif;
     text-align: center;
-    
 }
 
+.plantCard {
+    font-weight: bold;
+}
+
+h3 {
+    font-style: italic;
+}
 
 .navbar {
     border-bottom: 3px solid #dddddd;
@@ -111,6 +117,60 @@ body{
 .item{
     // font-size:25px;
     color:white;
+}
+
+.login {
+    text-align: center;
+    h4 {
+        font-size: 50px;
+        color: rgb(85, 85, 85);
+        font-weight: bold;
+    }
+    form {
+        font-size: 25px;
+    }
+    button{
+        border-radius: 8px;
+        font-size: 20px;
+    }
+    button:hover {
+        border-radius: 8px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        background-color: grey; /* Green */
+        color: white; 
+    }
+    a { 
+        color: grey; 
+        font-size: 20px;
+    }
+}
+
+.SignupForm {
+    text-align: center;
+    h4 {
+        font-size: 50px;
+        color: rgb(85, 85, 85);
+        font-weight: bold;
+    }
+    form {
+        font-size: 25px;
+    }
+    button{
+        border-radius: 8px;
+        font-size: 20px;
+    }
+    button:hover {
+        border-radius: 8px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        background-color: grey; /* Green */
+        color: white; 
+    }
+    a { 
+        color: grey; 
+        font-size: 20px;
+    }
 }
 
 .home {

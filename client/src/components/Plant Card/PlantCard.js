@@ -8,12 +8,12 @@ class PlantCard extends Component {
         <div>
           <h1>{plant.commonName}</h1>
           <h3>{plant.scientificName}</h3>
-          <p>Lighting Requirements:{plant.light}</p>
-          <p>Watering:{plant.water}</p>
-          <p>Soil Preferences:{plant.soil}</p>
-          <p>Propagation:{plant.propagation}</p>
-          <p>Fertilizing:{plant.fertilizer}</p>
-          <p>Pet Toxicity:{plant.petToxicity}</p>
+          <p>Lighting Requirements: {plant.light}</p>
+          <p>Watering: {plant.water}</p>
+          <p>Soil Preferences: {plant.soil}</p>
+          <p>Propagation: {plant.propagation}</p>
+          <p>Fertilizing: {plant.fertilizer}</p>
+          <p>Pet Toxicity: {plant.petToxicity}</p>
           <img src={plant.img} alt={plant.commonName}></img>
           {/* <deleteButton /> */}
         </div>
