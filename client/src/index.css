@@ -2,20 +2,37 @@
 body {
   margin: 0;
   background-color: white;
-  background: url("./images/image1.jpg") no-repeat center center fixed;
+  background: url("./images/image8.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  font-family: 'Encode Sans Expanded', sans-serif; }
 
 .home {
+  color: grey;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align: center; }
+  .home .description {
+    font-weight: bold; }
+
+.search-container {
   font-size: 50px;
-  color: white;
+  color: grey;
   font-family: 'Encode Sans Expanded', sans-serif;
   text-align: center; }
 
-.description {
+.explore-container {
+  font-size: 25px;
+  color: #555555;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align: center; }
+
+.plantCard {
   font-weight: bold; }
+
+h3 {
+  font-style: italic; }
 
 .navbar {
   border-bottom: 3px solid #dddddd;
@@ -25,18 +42,26 @@ body {
   height: 225px;
   display: grid;
   grid-area: header; }
-
-.nav {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px; }
-
-a {
-  color: grey; }
+  .navbar .nav {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px; }
+    .navbar .nav .title {
+      margin-top: 0px;
+      display: inline-block;
+      width: 250px;
+      height: 100px;
+      font-family: 'Encode Sans Expanded', sans-serif;
+      font-size: 125px;
+      font-weight: 200;
+      line-height: 0px;
+      color: grey;
+      text-align: center;
+      text-decoration: none; }
 
 .list {
   color: grey;
@@ -44,25 +69,85 @@ a {
   float: right;
   width: 200px;
   font-family: 'Encode Sans Expanded', sans-serif;
-  font-size: 25px;
   font-weight: 200;
   line-height: 320px;
   text-align: center;
   text-decoration: none; }
-
-.title {
-  margin-top: 0px;
-  display: inline-block;
-  width: 250px;
-  height: 100px;
-  font-family: 'Encode Sans Expanded', sans-serif;
-  font-size: 125px;
-  font-weight: 200;
-  line-height: 0px;
-  color: grey;
-  text-align: center;
-  text-decoration: none; }
+  .list a {
+    color: grey; }
 
 .item {
-  font-size: 25px;
-  color: black; }
+  color: white; }
+
+.login {
+  text-align: center; }
+  .login h4 {
+    font-size: 50px;
+    color: #555555;
+    font-weight: bold; }
+  .login form {
+    font-size: 25px; }
+  .login button {
+    border-radius: 8px;
+    font-size: 20px; }
+  .login button:hover {
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    background-color: grey;
+    /* Green */
+    color: white; }
+  .login a {
+    color: grey;
+    font-size: 20px; }
+
+.SignupForm {
+  text-align: center; }
+  .SignupForm h4 {
+    font-size: 50px;
+    color: #555555;
+    font-weight: bold; }
+  .SignupForm form {
+    font-size: 25px; }
+  .SignupForm button {
+    border-radius: 8px;
+    font-size: 20px; }
+  .SignupForm button:hover {
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    background-color: grey;
+    /* Green */
+    color: white; }
+  .SignupForm a {
+    color: grey;
+    font-size: 20px; }
+
+.home {
+  font-size: 300%; }
+  @media only screen and (min-width: 112.5em) {
+    .home {
+      font-size: 300%; } }
+  @media only screen and (max-width: 100em) {
+    .home {
+      font-size: 200%; } }
+
+.title {
+  font-size: 300%; }
+  @media only screen and (min-width: 112.5em) {
+    .title {
+      font-size: 300%; } }
+  @media only screen and (max-width: 100em) {
+    .title {
+      font-size: 200%; } }
+
+.list {
+  font-size: 180%; }
+  @media only screen and (min-width: 112.5em) {
+    .list {
+      font-size: 150%; } }
+  @media only screen and (max-width: 100em) {
+    .list {
+      font-size: 200%; } }
