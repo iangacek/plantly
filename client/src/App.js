@@ -6,9 +6,10 @@ import Navbar from "./components/Navbar/navbar";
 import Explore from "./components/Explore/explore";
 import Search from "./components/Search/search";
 import Home from "./components/Home/home";
+import MyGarden from "./components/MyGarden/myGarden";
+import PlantEntry from "./components/PlantEntry/plantEntry";
 import Signup from './components/sign-up/sign-up';
 import LoginForm from './components/login-form/login-form';
-import MyGarden from "./components/MyGarden/myGarden";
 
 class App extends Component {
  constructor() {
@@ -73,6 +74,7 @@ class App extends Component {
            <Route exact path="/explore" render={() => {return <Explore username={this.state.username}/>}}/>
            <Route exact path="/search" render={() => {return <Search username={this.state.username}/>}}/>
            <Route exact path="/myGarden" render={() => {return <MyGarden username={this.state.username}/>}}/>
+           <Route exact path="/myGarden/plantEntry" render={() => {return <PlantEntry username={this.state.username}/>}}/>
          </Switch>
        }
      </Router>

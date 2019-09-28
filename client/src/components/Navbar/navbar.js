@@ -10,7 +10,6 @@ function Navbar (){
         <h1 className ="title">
           <p>plantly</p>
         </h1>
-
         <li className = "list">
             <Link to={"/explore"}>Explore</Link>
         </li>

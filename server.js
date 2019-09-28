@@ -77,9 +77,8 @@ app.use('/user', user);
 
 // Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
-  console.log("Entire list of plants should populate here");
   try {
-    db.plant.find({}).then(plants => {
+    db.plantdb.find({}).then(plants => {
       res.json(plants);
       console.log(plants);
     });
@@ -107,6 +106,37 @@ app.post("/plantly-addToGarden", (req, res) => {
     res.json(gardens);
   });
 });
+
+// ================================= ADD-PLANT ROUTES =================================
+
+// Post plant to the mongo database
+app.post("/submit", function(req, res) {
+  // Save the request body as an object called plant
+  var plant = req.body;
+  console.log("plant data: ", req.body);
+  db.plantdb.create(plant, function(error, saved) {
+    if (error) {
+      res.send(error)
+    } else {
+      res.send(saved);
+      console.log('saved=======', saved)
+      console.log("Submit hit!");
+    }
+  });
+});
+
+// Delete plant from mongo database
+// app.delete("/delete", function(req, res) {
+//     console.log("plant data: ", req.body);
+//     db.plantdb.delete(plant, function(error, deleted) {
+//       if (error) {
+//         res.send(error)
+//       } else {
+//         res.send(deleted);
+//         console.log("Delete hit!");
+//       }
+//     });
+// });
 
 // Default route to index.html
 app.get("*", (req, res) => {
