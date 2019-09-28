@@ -15,5 +15,18 @@ export default {
     addToGarden: (id) => {
         console.log(id.props.plant)
         return axios.post("/plantly-addToGarden", id.props.plant)
-    }
+    },
+
+    // Saves a plant to the database
+    savePlant: (plantData) => {
+        console.log("savePlant hit!")
+        return axios.post("/submit", plantData);
+    },
+
+    // // deletePlant: 
+    // deletePlant: () =>{
+    //   console.log("deletePlant hit!")
+    // }
 };
+
+
