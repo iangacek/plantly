@@ -1,14 +1,31 @@
 const express = require("express");
 var mongoose = require("mongoose");
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+const passport = require('./passport');
+const user = require("./passport/routes/user");
+// const api = require("./routes");
 const app = express();
+const axios = require("axios");
 const db = require("./models"); // Requires plant schema in models folder
+require("dotenv").config();
 
 // Set server-port to 3001
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
+app.use(morgan('dev'));
+app.use(
+	bodyParser.urlencoded({
+		extended: false
+	})
+);
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -16,15 +33,29 @@ if (process.env.NODE_ENV === "production") {
 
 // References MongoDB database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/plantly";
-
 mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
-  useNewUrlParser: true,
+  useNewUrlParser: true
 });
+mongoose.set("useCreateIndex", true);
+
+app.use(
+	session({
+		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    //problem maybe above, no database connection in outside folder, only above in this file
+		resave: false, //required
+		saveUninitialized: false //required
+	})
+)
+
+// Passport
+app.use(passport.initialize());
+app.use(passport.session()); // calls the deserializeUser
+app.use('/user', user);
+// app.use('/api', api);
 
 // Define API routes here
-// app.use(routes);
-
 // Treffle API plant search request
 // app.get("/API-search/:plantSearch", (req, res) => {
 //   console.log('endpoint hit');
@@ -34,7 +65,6 @@ mongoose.connect(MONGODB_URI, {
 //   .then(data => {res.json(data.data)})
 //     .catch(err => res.json(err));
 // });
-
 // Treffle API ID search
 // app.get("/ID-search/:id", (req, res) => {
 //   var tolken = "token=c1crZVFidEhCZzhoOTVnUWVyNFNZUT09";
@@ -47,13 +77,35 @@ mongoose.connect(MONGODB_URI, {
 
 // Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
-  db.plant.find().then(plants => res.json(plants));
+  console.log("Entire list of plants should populate here");
+  try {
+    db.plant.find({}).then(plants => {
+      res.json(plants);
+      console.log(plants);
+    });
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 // Plantly database API route
 app.get("/plantly-search/:plantName", (req, res) => {
-  console.log(req.params.plantName)
-  db.plant.find({ commonName: { "$regex": req.params.plantName, "$options": "i" } }).then(plants => res.json(plants));
+  console.log(req.params.plantName);
+  db.plant
+    .find({ commonName: { $regex: req.params.plantName, $options: "i" } })
+    .then(plants => res.json(plants));
+});
+
+// Plantly Add To Garden route
+app.post("/plantly-addToGarden", (req, res) => {
+  console.log("Added a plant to your garden");
+  console.log(req.body);
+  db.garden
+  .create(req.body)
+  .then(gardens => {
+    console.log(gardens);
+    res.json(gardens);
+  });
 });
 
 // Default route to index.html
@@ -61,7 +113,6 @@ app.get("*", (req, res) => {
   // res.sendFile(path.join(__dirname, "./client/build/index.html"));
   res.json("Hello!");
 });
-
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });

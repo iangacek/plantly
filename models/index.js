@@ -1,3 +1,4 @@
 module.exports = {
-    plant: require("./plant")
+    plant: require("./plant"),
+    garden: require("./garden")
   };

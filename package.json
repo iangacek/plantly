@@ -21,13 +21,21 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.3",
+    "connect-mongo": "^3.0.0",
     "dotenv": "^8.1.0",
     "express": "^4.16.3",
+    "express-session": "^1.16.2",
     "fs": "0.0.1-security",
     "if-env": "^1.0.4",
+    "mongo-store": "0.0.2",
     "mongoose": "^5.7.1",
+    "morgan": "^1.9.1",
     "node-sass": "^4.12.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "request": "^2.88.0"
   }
 }
