@@ -4,7 +4,7 @@ const app = express();
 const axios = require("axios");
 const fs = require("fs"); // Require File System data in .JSON
 const db = require("./models"); // Requires plant schema in models folder
-require("dotenv").config() ;
+require("dotenv").config();
 
 // Set server-port to 3001
 const PORT = process.env.PORT || 3001;
@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/plantly";
 mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
-  useNewUrlParser: true,
+  useNewUrlParser: true
 });
 mongoose.set("useCreateIndex", true);
 
@@ -70,9 +70,11 @@ app.get("/plantly-search/:plantName", (req, res) => {
 // Plantly Add To Garden route
 app.get("/plantly-addToGarden", (req, res) => {
   console.log("Added a plant to your garden");
-  // console.log(req.params.plant)
-  // db.garden.create(req.body);
-  // res.json(plants);
+  db.garden
+  .find({}).then(gardens => {
+    res.json(gardens);
+    console.log(gardens);
+  });
 });
 
 // Default route to index.html
