@@ -181,7 +181,7 @@ h3 {
   
     @include responsive(phone) { // width < 600?
       font-size:200%; //1rem = 6px 6/16 = 37.5%
-      color:red;
+    //   color:red;
     }
 }
 
@@ -193,7 +193,7 @@ h3 {
   
     @include responsive(phone) { // width < 600?
       font-size:200%; //1rem = 6px 6/16 = 37.5%
-      color:red;
+    //   color:red;
     }
 }
 
@@ -205,6 +205,6 @@ h3 {
   
     @include responsive(phone) { // width < 600?
       font-size:200%; //1rem = 6px 6/16 = 37.5%
-      color:red;
+    //   color:red;
     }
 }

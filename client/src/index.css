@@ -132,8 +132,7 @@ h3 {
       font-size: 300%; } }
   @media only screen and (max-width: 100em) {
     .home {
-      font-size: 200%;
-      color: red; } }
+      font-size: 200%; } }
 
 .title {
   font-size: 300%; }
@@ -142,8 +141,7 @@ h3 {
       font-size: 300%; } }
   @media only screen and (max-width: 100em) {
     .title {
-      font-size: 200%;
-      color: red; } }
+      font-size: 200%; } }
 
 .list {
   font-size: 180%; }
@@ -152,5 +150,4 @@ h3 {
       font-size: 150%; } }
   @media only screen and (max-width: 100em) {
     .list {
-      font-size: 200%;
-      color: red; } }
+      font-size: 200%; } }
