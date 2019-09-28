@@ -6,8 +6,8 @@ import Navbar from "./components/Navbar/navbar";
 import Explore from "./components/Explore/explore";
 import Search from "./components/Search/search";
 import Home from "./components/Home/home";
-import Signup from './components/Sign-up/sign-up';
-import LoginForm from './components/Login-form/login-form';
+import Signup from './components/sign-up/sign-up';
+import LoginForm from './components/login-form/login-form';
 import myGarden from "./components/MyGarden/myGarden";
 
 class App extends Component {

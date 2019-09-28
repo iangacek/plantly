@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background-color: white;
-  background: url("./images/image1.jpg") no-repeat center center fixed;
+  background: url("./images/image8.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,7 +10,7 @@ body {
   font-family: 'Encode Sans Expanded', sans-serif; }
 
 .home {
-  color: white;
+  color: grey;
   font-family: 'Encode Sans Expanded', sans-serif;
   text-align: center; }
   .home .description {
@@ -18,7 +18,13 @@ body {
 
 .search-container {
   font-size: 50px;
-  color: white;
+  color: grey;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align: center; }
+
+.explore-container {
+  font-size: 25px;
+  color: #555555;
   font-family: 'Encode Sans Expanded', sans-serif;
   text-align: center; }
 
