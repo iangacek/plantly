@@ -38,7 +38,7 @@ class Search extends React.Component {
             type="text"
             value={this.state.searchTerm}
             onChange={this.handleInputChange}
-            placeholder="i.e. monstera deliciosa"
+            placeholder="i.e. snake plant"
           ></input>
           <button onClick={this.formSubmit}>Submit</button>
         </form>

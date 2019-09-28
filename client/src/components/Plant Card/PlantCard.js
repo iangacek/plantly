@@ -15,7 +15,6 @@ class PlantCard extends Component {
           <p>Fertilizing:{plant.fertilizer}</p>
           <p>Pet Toxicity:{plant.petToxicity}</p>
           <img src={plant.img} alt={plant.commonName}></img>
-          <deleteButton />
         </div>
       </div>
     );

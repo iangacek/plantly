@@ -8,7 +8,7 @@ import Search from "./components/Search/search";
 import Home from "./components/Home/home";
 import Signup from './components/Sign-up/sign-up';
 import LoginForm from './components/Login-form/login-form';
-import myGarden from "./components/MyGarden/myGarden";
+import MyGarden from "./components/MyGarden/myGarden";
 
 class App extends Component {
  constructor() {
@@ -53,7 +53,7 @@ class App extends Component {
        <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
        {!this.state.loggedIn ?
        // if user not logged in,  force login
-       <Switch>
+       (<Switch>
          <Route
          path="/signup"
          render={() =>
@@ -66,13 +66,13 @@ class App extends Component {
              />
            }
            />
-       </Switch>
+       </Switch>)
        :
          <Switch>
-           <Route exact path="/signup" component={Home} />
-           <Route exact path="/explore" component={Explore} />
-           <Route exact path="/search" component={Search} />
-           <Route exact path="/myGarden" component={myGarden} />
+           <Route exact path="/signup" render={() => {return <Home username={this.state.username}/>}}/>
+           <Route exact path="/explore" render={() => {return <Explore username={this.state.username}/>}}/>
+           <Route exact path="/search" render={() => {return <Search username={this.state.username}/>}}/>
+           <Route exact path="/myGarden" render={() => {return <MyGarden username={this.state.username}/>}}/>
          </Switch>
        }
      </Router>
