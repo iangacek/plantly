@@ -17,6 +17,8 @@ export default {
     return axios.post("/submit", plantData);
   },
 
-  // deletePlant: 
-
+  // // deletePlant: 
+  // deletePlant: () =>{
+  //   console.log("deletePlant hit!")
+  // }
 };

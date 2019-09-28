@@ -47,7 +47,7 @@ mongoose.set("useCreateIndex", true);
 app.get("/plantly-explore", (req, res) => {
   console.log("Entire list of plants should populate here");
   try {
-    db.plant.find({}).then(plants => {
+    db.plantdb.find({}).then(plants => {
       res.json(plants);
       console.log(plants);
     });
@@ -82,17 +82,17 @@ app.post("/submit", function(req, res) {
 });
 
 // Delete plant from mongo database
-app.delete("/delete", function(req, res) {
-    console.log("plant data: ", req.body);
-    db.plantdb.delete(plant, function(error, deleted) {
-      if (error) {
-        res.send(error)
-      } else {
-        res.send(deleted);
-        console.log("Delete hit!");
-      }
-    });
-});
+// app.delete("/delete", function(req, res) {
+//     console.log("plant data: ", req.body);
+//     db.plantdb.delete(plant, function(error, deleted) {
+//       if (error) {
+//         res.send(error)
+//       } else {
+//         res.send(deleted);
+//         console.log("Delete hit!");
+//       }
+//     });
+// });
 
 // Default route to index.html
 app.get("*", (req, res) => {

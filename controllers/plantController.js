@@ -22,10 +22,11 @@ module.exports = {
       .then(dbPlant => res.json(dbPlant))
       .catch(err => res.status(422).json(err));
   },
-  remove: function(req, res) {
-    db.plantdb.findById(req.params.id)
-      .then(dbPlant => dbPlant.remove())
-      .then(dbPlant => res.json(dbPlant))
-      .catch(err => res.status(422).json(err));
-  }
+  // Change 'plantdb' to 'gardendb' after vince-branch merge
+  // remove: function(req, res) {
+  //   db.plantdb.findById(req.params.id)
+  //     .then(dbPlant => dbPlant.remove())
+  //     .then(dbPlant => res.json(dbPlant))
+  //     .catch(err => res.status(422).json(err));
+  // }
 };
