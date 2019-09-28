@@ -9,6 +9,7 @@ const user = require("./passport/routes/user");
 // const api = require("./routes");
 const app = express();
 const db = require("./models"); // Requires schemas in models folder
+require("dotenv").config();
 // Set server-port to 3001
 const PORT = process.env.PORT || 3001;
 
