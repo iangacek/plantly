@@ -5,6 +5,8 @@ const morgan = require('morgan');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const passport = require('./passport');
+const user = require("./passport/routes/user");
+// const api = require("./routes");
 const app = express();
 const db = require("./models"); // Requires schemas in models folder
 // Set server-port to 3001
@@ -36,7 +38,7 @@ mongoose.connect(MONGODB_URI, {
 app.use(
 	session({
 		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
-    store: new MongoStore({ mongooseConnection: db }),
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
     //problem maybe above, no database connection in outside folder, only above in this file
 		resave: false, //required
 		saveUninitialized: false //required
@@ -47,7 +49,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session()); // calls the deserializeUser
 app.use('/user', user);
-app.use('/api', api);
+// app.use('/api', api);
 
 // Define API routes here
 // app.use(routes);
