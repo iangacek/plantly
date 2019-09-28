@@ -1,11 +1,24 @@
 const express = require("express");
 var mongoose = require("mongoose");
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+const passport = require('./passport');
+const user = require("./passport/routes/user");
+// const api = require("./routes");
 const app = express();
-const db = require("./models"); // Requires plant schema in models folder
-require('dotenv').config()
+const db = require("./models"); // Requires schemas in models folder
 // Set server-port to 3001
 const PORT = process.env.PORT || 3001;
 // Define middleware here
+app.use(morgan('dev'));
+app.use(
+	bodyParser.urlencoded({
+		extended: false
+	})
+);
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
@@ -18,6 +31,23 @@ mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
+
+app.use(
+	session({
+		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    //problem maybe above, no database connection in outside folder, only above in this file
+		resave: false, //required
+		saveUninitialized: false //required
+	})
+)
+
+// Passport
+app.use(passport.initialize());
+app.use(passport.session()); // calls the deserializeUser
+app.use('/user', user);
+// app.use('/api', api);
+
 // Define API routes here
 // Treffle API plant search request
 // app.get("/API-search/:plantSearch", (req, res) => {
@@ -64,6 +94,3 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
-// Creates initial plant-database
-// var plantdb = require("./plantlyAPI.json")
-// db.plant.create(plantdb).then(plant => console.log(plant));
