@@ -6,7 +6,7 @@ class Search extends React.Component {
   state = {
     username: "",
     searchTerm: "",
-    plants: [],
+    plants: []
   };
 
   componentWillMount= () => {
