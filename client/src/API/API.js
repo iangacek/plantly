@@ -13,7 +13,7 @@ export default {
     },
 
     addToGarden: (id) => {
-        console.log(id.props.plant)
+        console.log("plant-console log", id.props.plant)
         return axios.post("/plantly-addToGarden", id.props.plant)
     },
 

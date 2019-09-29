@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import API from "../../API/API.js";
 
 class PlantCard extends Component {
+
   render() {
-    const { plant } = this.props;
+    const { plant, userName} = this.props;
+    console.log("username", this.props.userName);
+    // console.log(this.props.userName);
     return (
       <div className="plantCard">
         <div>
@@ -25,6 +28,7 @@ class PlantCard extends Component {
   formSubmit = event => {
     event.preventDefault();
     API.addToGarden(this);
+    // console.log("username", this.props.userName);
   };
 }
 
