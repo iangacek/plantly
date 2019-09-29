@@ -4,9 +4,22 @@ import PlantCard from "../Plant Card/PlantCard";
 
 class Search extends React.Component {
   state = {
+    username: "",
     searchTerm: "",
     plants: [],
   };
+
+  componentWillMount= () => {
+    console.log(this.props.username);
+    this.setState({username: this.props.username});
+  }
+
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     username: this.props.username
+  //   };
+  // }
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -29,6 +42,7 @@ class Search extends React.Component {
   };
 
   render() {
+    console.log(this.state.username, "username");
     return (
       <div className="search-container">
         <h1>Plant Search</h1>
@@ -44,7 +58,7 @@ class Search extends React.Component {
         </form>
 
         {this.state.plants.map(plant => (
-          <PlantCard plant={plant} />
+          <PlantCard plant={plant} userName={this.state.username}/>
         ))}
 
       </div>

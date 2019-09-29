@@ -78,7 +78,7 @@ app.use('/user', user);
 // Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
   try {
-    db.plantdb.find({}).then(plants => {
+    db.plant.find({}).then(plants => {
       res.json(plants);
       console.log(plants);
     });
