@@ -53,27 +53,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session()); // calls the deserializeUser
 app.use('/user', user);
-// app.use('/api', api);
-
-// Define API routes here
-// Treffle API plant search request
-// app.get("/API-search/:plantSearch", (req, res) => {
-//   console.log('endpoint hit');
-//   var tolken = "token=c1crZVFidEhCZzhoOTVnUWVyNFNZUT09";
-//   var endPoint = "https://trefle.io/api/plants?"+ tolken + "&q=" + req.params.plantSearch;
-//   axios.get(endPoint)
-//   .then(data => {res.json(data.data)})
-//     .catch(err => res.json(err));
-// });
-// Treffle API ID search
-// app.get("/ID-search/:id", (req, res) => {
-//   var tolken = "token=c1crZVFidEhCZzhoOTVnUWVyNFNZUT09";
-//   console.log(req.params.id)
-//   var endPoint = "https://trefle.io/api/plants/" + req.params.id + "?" + tolken;
-//   axios.get(endPoint)
-//   .then(data => {res.json(data.data)})
-//     .catch(err => res.json(err));
-// });
 
 // Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
