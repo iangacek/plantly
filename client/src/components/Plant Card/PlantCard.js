@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import API from "../../API/API.js";
 
 class PlantCard extends Component {
+
+
   render() {
-    const { plant } = this.props;
+    const { plant, addGarden  } = this.props;
     return (
       <div className="plantCard">
 
@@ -18,7 +20,7 @@ class PlantCard extends Component {
           <p><b>Pet Toxicity:</b> {plant.petToxicity}</p>
           <img src={plant.img} class="auth-image" alt={plant.commonName}></img>
 
-          <button onClick={this.formSubmit}>Add to My Garden</button>
+          <button onClick={addGarden(plant.commonName)}>Add to My Garden</button>
         </div>
       </div>
       

@@ -28,6 +28,22 @@ class Search extends React.Component {
     console.log(this.state.plants);
   };
 
+  handleAdd = (commonName) =>{
+    console.log("handleaddgarden")
+    //api call to
+    let userName = "Laura"
+   commonName = "jade"
+   console.log(this.state.plants)
+   let plant = this.state.plants[0]
+   console.log("PLANT: ", plant)
+     API.addToGarden(plant, userName)
+     .then(result =>{
+       // render with a message
+     })
+
+   
+  }
+
   render() {
     return (
       <div className="search-container">
@@ -44,7 +60,7 @@ class Search extends React.Component {
         </form>
         <div className="explore-container">
         {this.state.plants.map(plant => (
-          <PlantCard plant={plant} />
+          <PlantCard plant={plant} addGarden={this.handleAdd}  />
         ))}
 </div>
       </div>

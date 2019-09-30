@@ -12,9 +12,9 @@ export default {
         return axios.get("/plantly-search/" + term)
     },
 
-    addToGarden: (id) => {
-        console.log(id.props.plant)
-        return axios.post("/plantly-addToGarden", id.props.plant)
+    addToGarden:(plant, userName) => {
+        console.log(plant, userName)
+        return axios.post("/plantly-addToGarden", {plant, userName})
     },
 
     // Saves a plant to the database

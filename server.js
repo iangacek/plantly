@@ -18,9 +18,9 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(morgan('dev'));
 app.use(
-	bodyParser.urlencoded({
-		extended: false
-	})
+  bodyParser.urlencoded({
+    extended: false
+  })
 );
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
@@ -40,13 +40,13 @@ mongoose.connect(MONGODB_URI, {
 mongoose.set("useCreateIndex", true);
 
 app.use(
-	session({
-		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
+  session({
+    secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
     //problem maybe above, no database connection in outside folder, only above in this file
-		resave: false, //required
-		saveUninitialized: false //required
-	})
+    resave: false, //required
+    saveUninitialized: false //required
+  })
 )
 
 // Passport
@@ -99,22 +99,48 @@ app.get("/plantly-search/:plantName", (req, res) => {
 app.post("/plantly-addToGarden", (req, res) => {
   console.log("Added a plant to your garden");
   console.log(req.body);
-  db.garden
-  .create(req.body)
-  .then(gardens => {
-    console.log(gardens);
-    res.json(gardens);
-  });
+  // verify if the garden is existing, if not you need to create the garden 
+  // then you need to add the plant to the garden 
+  // db.garden
+  // .create(req.body)
+  // .then(gardens => {
+  //   console.log(gardens);
+  //   res.json(gardens);
+  // });
+
+
+  // Create a new note and pass the req.body to the entry
+  console.log(req.body)
+
+  db.plantdb.create(req.body.plant)
+    .then(function (dbPlant) {
+      return db.gardens.findOneAndUpdate({ userName: req.body.userName }, { $push: { plantdb: plantdb._id } }, { new: true });
+    })
+    .then(function (dbGarden) {
+      res.json(dbGarden);
+    })
+    .catch(function (err) {
+      res.json(err);
+    });
 });
 
+
+// other route to get all the plants fromm the garden app.post("/plantly-addToGarden", (req, res) => {
+app.get("/plantly-addToGarden", (req, res) => {
+  db.gardens.findOne({userName: req.body.username})
+    .populate("plants")
+    .then(function (garden) {
+      res.json(garden)
+    })
+})
 // ================================= ADD-PLANT ROUTES =================================
 
 // Post plant to the mongo database
-app.post("/submit", function(req, res) {
+app.post("/submit", function (req, res) {
   // Save the request body as an object called plant
   var plant = req.body;
   console.log("plant data: ", req.body);
-  db.plantdb.create(plant, function(error, saved) {
+  db.plantdb.create(plant, function (error, saved) {
     if (error) {
       res.send(error)
     } else {
