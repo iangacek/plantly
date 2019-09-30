@@ -6,7 +6,7 @@ class PlantCard extends Component {
   render() {
     const { plant, userName} = this.props;
     console.log("username", this.props.userName);
-    // console.log(this.props.userName);
+
     return (
       <div className="plantCard">
         <div>
