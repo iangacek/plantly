@@ -17,9 +17,11 @@ body {
   .home .description {
     font-weight: bold; }
 
-.search-container h1 {
+.search-container h6 {
   font-size: 75px;
   font-weight: 100;
+  margin-block-start: .75em;
+  margin-block-end: .75em;
   color: grey;
   font-family: 'Encode Sans Expanded', sans-serif;
   text-align: center;
@@ -63,7 +65,9 @@ body {
 .plantCard {
   border-style: ridge; }
   .plantCard h1 {
-    font-size: 30px; }
+    font-size: 30px;
+    text-align: center;
+    display: block; }
   .plantCard h3 {
     font-style: italic;
     font-size: 25px; }
@@ -189,11 +193,28 @@ body {
 .SignupForm {
   text-align: center; }
   .SignupForm h4 {
-    font-size: 50px;
-    color: #555555;
-    font-weight: bold; }
+    font-size: 75px;
+    font-weight: 100;
+    margin-block-start: .75em;
+    margin-block-end: .75em;
+    padding-left: 30%;
+    color: #555555; }
   .SignupForm form {
-    font-size: 25px; }
+    font-size: 25px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    padding-left: 30%; }
+  .SignupForm input[type=text] {
+    width: 20%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 20px; }
+  .SignupForm input[type=password] {
+    width: 20%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 20px; }
   .SignupForm button {
     border-radius: 8px;
     font-size: 20px; }
@@ -207,7 +228,8 @@ body {
     color: white; }
   .SignupForm a {
     color: grey;
-    font-size: 20px; }
+    font-size: 20px;
+    padding-left: 30%; }
 
 .home {
   font-size: 300%; }
