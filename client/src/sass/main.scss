@@ -57,9 +57,10 @@ body{
     }
     input[type=text] {
         width: 20%;
-        padding: 12px 20px;
+        padding: 10px;
         border-radius: 4px;
         background-color: white;
+        font-size: 20px;
       }
     button{
         border-radius: 8px;
@@ -75,8 +76,6 @@ body{
 }
 
 .explore-container {
-    // font-size: 25px;
-    // max-width: 600px;
     color: rgb(85, 85, 85);
     font-family: 'Encode Sans Expanded', sans-serif;
     text-align: center;
@@ -156,10 +155,6 @@ body{
     .nav {
         display: block;
         list-style-type: disc;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
         padding-inline-start: 40px;
         
         .title {

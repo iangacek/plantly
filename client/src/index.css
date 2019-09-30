@@ -31,9 +31,10 @@ body {
 
 .search-container input[type=text] {
   width: 20%;
-  padding: 12px 20px;
+  padding: 10px;
   border-radius: 4px;
-  background-color: white; }
+  background-color: white;
+  font-size: 20px; }
 
 .search-container button {
   border-radius: 8px;
@@ -111,10 +112,6 @@ body {
   .navbar .nav {
     display: block;
     list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     padding-inline-start: 40px; }
     .navbar .nav .title {
       margin-top: 0px;
