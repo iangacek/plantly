@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:100&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 body {
   margin: 0;
   background-color: white;
@@ -68,7 +69,7 @@ body {
   .plantCard p {
     font-size: 20px; }
   .plantCard img {
-    width: 20%;
+    width: 25%;
     height: 25%; }
   .plantCard button {
     border-radius: 8px;
@@ -150,11 +151,28 @@ body {
 .login {
   text-align: center; }
   .login h4 {
-    font-size: 50px;
-    color: #555555;
-    font-weight: bold; }
+    font-size: 75px;
+    font-weight: 100;
+    margin-block-start: .75em;
+    margin-block-end: .75em;
+    padding-left: 30%;
+    color: #555555; }
   .login form {
-    font-size: 25px; }
+    font-size: 25px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    padding-left: 30%; }
+  .login input[type=text] {
+    width: 20%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 20px; }
+  .login input[type=password] {
+    width: 20%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 20px; }
   .login button {
     border-radius: 8px;
     font-size: 20px; }
@@ -168,7 +186,8 @@ body {
     color: white; }
   .login a {
     color: grey;
-    font-size: 20px; }
+    font-size: 20px;
+    padding-left: 30%; }
 
 .SignupForm {
   text-align: center; }
