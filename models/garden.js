@@ -12,7 +12,7 @@ const gardenSchema = new Schema({
   soil: { type: String},
   water: { type: String},
   id: { type: Number },
-  username: { type: String }
+  userName: { type: String }
 });
 
 module.exports = mongoose.model("garden", gardenSchema);

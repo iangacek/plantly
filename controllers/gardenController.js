@@ -27,5 +27,12 @@ module.exports = {
       .then(garden => garden.remove())
       .then(garden => res.json(garden))
       .catch(err => res.status(422).json(err));
-  }
+  },
+
+  //Populate gardens with this code
+  //I know this probably isnt how we grab req.params.username but I'm hoping it's close.
+  findByUser: function(req,res) {
+  db.garden.find({ username: req.params.userName})
+    .then(garden => res.json(garden))
+    .catch(err => res.status(422).json(err))}
 };
