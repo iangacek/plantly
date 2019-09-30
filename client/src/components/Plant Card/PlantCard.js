@@ -9,19 +9,22 @@ class PlantCard extends Component {
 
     return (
       <div className="plantCard">
+
         <div>
           <h1>{plant.commonName}</h1>
           <h3>{plant.scientificName}</h3>
-          <p>Lighting Requirements: {plant.light}</p>
-          <p>Watering: {plant.water}</p>
-          <p>Soil Preferences: {plant.soil}</p>
-          <p>Propagation: {plant.propagation}</p>
-          <p>Fertilizing: {plant.fertilizer}</p>
-          <p>Pet Toxicity: {plant.petToxicity}</p>
-          <img src={plant.img} alt={plant.commonName}></img>
+          <p><b>Lighting Requirements:</b> {plant.light}</p>
+          <p><b>Watering:</b> {plant.water}</p>
+          <p><b>Soil Preferences:</b> {plant.soil}</p>
+          <p><b>Propagation:</b> {plant.propagation}</p>
+          <p><b>Fertilizing:</b> {plant.fertilizer}</p>
+          <p><b>Pet Toxicity:</b> {plant.petToxicity}</p>
+          <img src={plant.img} class="auth-image" alt={plant.commonName}></img>
+
           <button onClick={this.formSubmit}>Add to My Garden</button>
         </div>
       </div>
+      
     );
   }
 

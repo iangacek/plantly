@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 function MyGarden() {
   return (
-    <div>
+    <div className="myGarden">
       <h1>My Garden</h1>
       <h2>Your dashboard for virtual plant management</h2>
       <div>

@@ -24,12 +24,10 @@ class Explore extends React.Component {
     console.log(this.state.plants)
     return (
       <div className="explore-container">
-        <h1>Explore new plants</h1>
-        <div>
+        <h5>Explore new plants</h5>
           {this.state.plants.map( plant => <PlantCard plant = {plant}/>)}
-        </div>
-      </div>
-    );
+          </div>
+     );
   }
 }
 
