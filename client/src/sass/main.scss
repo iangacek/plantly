@@ -48,19 +48,59 @@ body{
 }
 
 .explore-container {
+    // font-size: 25px;
+    // max-width: 600px;
+    color: rgb(85, 85, 85);
+    font-family: 'Encode Sans Expanded', sans-serif;
+    text-align: center;
+    padding-left: 30%;
+    h5 {
+        font-size: 75px;
+        margin-block-start: .75em;
+        margin-block-end: .75em;
+    }
+}
+
+.plantCard {
+    border-style: ridge;
+
+    h1 {
+        font-size: 30px;
+    }
+    h3 {
+        font-style: italic;
+        font-size: 25px;
+    }
+    p {
+        font-size: 20px;
+    }
+    img {
+        width: 20%;
+        height: 25%;
+    }
+    button{
+        border-radius: 8px;
+        font-size: 20px;
+    }
+    button:hover {
+        border-radius: 8px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        background-color: grey; /* Green */
+        color: white; 
+    }
+}
+
+.myGarden {
     font-size: 25px;
+    // max-width: 600px;
     color: rgb(85, 85, 85);
     font-family: 'Encode Sans Expanded', sans-serif;
     text-align: center;
 }
 
-.plantCard {
-    font-weight: bold;
-}
 
-h3 {
-    font-style: italic;
-}
+
 
 .navbar {
     border-bottom: 3px solid #dddddd;
@@ -201,6 +241,18 @@ h3 {
     font-size:180%;
     @include responsive(l-desk) {
       font-size:150%; //1rem = 12px 12/16 = 75%
+    }
+  
+    @include responsive(phone) { // width < 600?
+      font-size:200%; //1rem = 6px 6/16 = 37.5%
+    //   color:red;
+    }
+}
+
+.explore-container {
+    font-size:300%;
+    @include responsive(l-desk) {
+      font-size:300%; //1rem = 12px 12/16 = 75%
     }
   
     @include responsive(phone) { // width < 600?
