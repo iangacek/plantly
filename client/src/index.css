@@ -16,11 +16,36 @@ body {
   .home .description {
     font-weight: bold; }
 
-.search-container {
-  font-size: 50px;
+.search-container h1 {
+  font-size: 100px;
+  font-weight: 100;
   color: grey;
   font-family: 'Encode Sans Expanded', sans-serif;
-  text-align: center; }
+  text-align: center;
+  padding-left: 30%; }
+
+.search-container form {
+  text-align: center;
+  padding-left: 30%; }
+
+.search-container input[type=text] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box; }
+
+.search-container button {
+  border-radius: 8px;
+  font-size: 20px; }
+
+.search-container button:hover {
+  border-radius: 8px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  background-color: grey;
+  /* Green */
+  color: white; }
 
 .explore-container {
   color: #555555;
@@ -29,6 +54,7 @@ body {
   padding-left: 30%; }
   .explore-container h5 {
     font-size: 75px;
+    font-weight: 100;
     margin-block-start: .75em;
     margin-block-end: .75em; }
 
@@ -60,7 +86,14 @@ body {
   font-size: 25px;
   color: #555555;
   font-family: 'Encode Sans Expanded', sans-serif;
-  text-align: center; }
+  text-align: center;
+  padding-left: 30%; }
+  .myGarden h1 {
+    font-weight: 100; }
+  .myGarden h2 {
+    font-weight: 100; }
+  .myGarden p {
+    font-weight: 100; }
 
 .navbar {
   border-bottom: 3px solid #dddddd;

@@ -41,10 +41,35 @@ body{
 }
 
 .search-container {
-    font-size: 50px;
+    h1{
+    font-size: 100px;
+    font-weight: 100;
     color: grey;
     font-family: 'Encode Sans Expanded', sans-serif;
     text-align: center;
+    padding-left: 30%;
+    }
+    form {
+        text-align: center;
+        padding-left: 30%;
+    }
+    input[type=text] {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+    button{
+        border-radius: 8px;
+        font-size: 20px;
+    }
+    button:hover {
+        border-radius: 8px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        background-color: grey; /* Green */
+        color: white; 
+    }
 }
 
 .explore-container {
@@ -56,6 +81,7 @@ body{
     padding-left: 30%;
     h5 {
         font-size: 75px;
+        font-weight: 100;
         margin-block-start: .75em;
         margin-block-end: .75em;
     }
@@ -97,6 +123,16 @@ body{
     color: rgb(85, 85, 85);
     font-family: 'Encode Sans Expanded', sans-serif;
     text-align: center;
+    padding-left: 30%;
+    h1 {
+        font-weight: 100;
+    }
+    h2 {
+        font-weight: 100;
+    }
+    p {
+        font-weight: 100;
+    }
 }
 
 
