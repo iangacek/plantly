@@ -3,9 +3,10 @@ import API from "../../API/API.js";
 
 class PlantCard extends Component {
 
-
   render() {
-    const { plant, addGarden  } = this.props;
+    const { plant, userName, showDeleteButton, showAddButton} = this.props;
+    // console.log(this.props, "props");
+
     return (
       <div className="plantCard">
 
@@ -18,18 +19,25 @@ class PlantCard extends Component {
           <p><b>Propagation:</b> {plant.propagation}</p>
           <p><b>Fertilizing:</b> {plant.fertilizer}</p>
           <p><b>Pet Toxicity:</b> {plant.petToxicity}</p>
-          <img src={plant.img} class="auth-image" alt={plant.commonName}></img>
+          <img src={plant.img} className="auth-image" alt={plant.commonName}></img>
 
-          <button onClick={addGarden(plant.commonName)}>Add to My Garden</button>
+        {showAddButton && <button onClick={this.formSubmit}>Add to My Garden</button>}
+        {showDeleteButton && <button onClick={this.deleteSubmit}>Delete from My Garden</button>}
+
         </div>
       </div>
       
     );
   }
 
+  deleteSubmit =  event => {
+    event.preventDefault();
+    API.deletePlant(this.props);
+  };
+
   formSubmit = event => {
     event.preventDefault();
-    API.addToGarden(this);
+    API.addToGarden(this.props);
   };
 }
 

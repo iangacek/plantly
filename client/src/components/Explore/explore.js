@@ -4,6 +4,7 @@ import PlantCard from "../Plant Card/PlantCard.js";
 class Explore extends React.Component {
   state = {
     plants: [],
+    username: ''
   };
 
   componentDidMount() {
@@ -11,7 +12,8 @@ class Explore extends React.Component {
       {
         console.log('api returned ', plants);
         this.setState({
-          plants: plants.data
+          plants: plants.data,
+          username: this.props.username
         })
       }
       
@@ -22,10 +24,11 @@ class Explore extends React.Component {
 
   render() {
     console.log(this.state.plants)
+    console.log(this.state.username)
     return (
       <div className="explore-container">
         <h5>Explore new plants</h5>
-          {this.state.plants.map( plant => <PlantCard plant = {plant}/>)}
+          {this.state.plants.map( plant => <PlantCard plant = {plant} userName={this.state.username} showAddButton={true}/>)}
           </div>
      );
   }

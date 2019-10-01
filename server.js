@@ -53,27 +53,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session()); // calls the deserializeUser
 app.use('/user', user);
-// app.use('/api', api);
-
-// Define API routes here
-// Treffle API plant search request
-// app.get("/API-search/:plantSearch", (req, res) => {
-//   console.log('endpoint hit');
-//   var tolken = "token=c1crZVFidEhCZzhoOTVnUWVyNFNZUT09";
-//   var endPoint = "https://trefle.io/api/plants?"+ tolken + "&q=" + req.params.plantSearch;
-//   axios.get(endPoint)
-//   .then(data => {res.json(data.data)})
-//     .catch(err => res.json(err));
-// });
-// Treffle API ID search
-// app.get("/ID-search/:id", (req, res) => {
-//   var tolken = "token=c1crZVFidEhCZzhoOTVnUWVyNFNZUT09";
-//   console.log(req.params.id)
-//   var endPoint = "https://trefle.io/api/plants/" + req.params.id + "?" + tolken;
-//   axios.get(endPoint)
-//   .then(data => {res.json(data.data)})
-//     .catch(err => res.json(err));
-// });
 
 // Plantly explore api route
 app.get("/plantly-explore", (req, res) => {
@@ -98,41 +77,21 @@ app.get("/plantly-search/:plantName", (req, res) => {
 // Plantly Add To Garden route
 app.post("/plantly-addToGarden", (req, res) => {
   console.log("Added a plant to your garden");
-  console.log(req.body);
-  // verify if the garden is existing, if not you need to create the garden 
-  // then you need to add the plant to the garden 
-  // db.garden
-  // .create(req.body)
-  // .then(gardens => {
-  //   console.log(gardens);
-  //   res.json(gardens);
-  // });
-
-
-  // Create a new note and pass the req.body to the entry
-  console.log(req.body)
-
-  db.plantdb.create(req.body.plant)
-    .then(function (dbPlant) {
-      return db.gardens.findOneAndUpdate({ userName: req.body.userName }, { $push: { plantdb: plantdb._id } }, { new: true });
-    })
-    .then(function (dbGarden) {
-      res.json(dbGarden);
-    })
-    .catch(function (err) {
-      res.json(err);
-    });
+  console.log("app.post to garden", req.body);
+  db.garden
+  .create(req.body)
+  .then(gardens => {
+    console.log('what is this',gardens);
+    res.json(gardens);
+  });
 });
 
+app.get("/myGarden/:userName", (req, res) => {
+  db.garden
+    .find({ userName: { $regex: req.params.userName, $options: "i" }})
+    .then(userName => res.json(userName))
+});
 
-// other route to get all the plants fromm the garden app.post("/plantly-addToGarden", (req, res) => {
-app.get("/plantly-addToGarden", (req, res) => {
-  db.gardens.findOne({userName: req.body.username})
-    .populate("plants")
-    .then(function (garden) {
-      res.json(garden)
-    })
-})
 // ================================= ADD-PLANT ROUTES =================================
 
 // Post plant to the mongo database
@@ -152,17 +111,16 @@ app.post("/submit", function (req, res) {
 });
 
 // Delete plant from mongo database
-// app.delete("/delete", function(req, res) {
-//     console.log("plant data: ", req.body);
-//     db.plantdb.delete(plant, function(error, deleted) {
-//       if (error) {
-//         res.send(error)
-//       } else {
-//         res.send(deleted);
-//         console.log("Delete hit!");
-//       }
-//     });
-// });
+app.delete("/delete/:id", function(req, res) {
+    db.garden.deleteOne(id, function(error, deleted) {
+      if (error) {
+        res.send(error)
+      } else {
+        res.send(deleted);
+        console.log("Delete hit!");
+      }
+    });
+});
 
 // Default route to index.html
 app.get("*", (req, res) => {

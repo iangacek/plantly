@@ -22,10 +22,15 @@ module.exports = {
       .then(garden => res.json(garden))
       .catch(err => res.status(422).json(err));
   },
-  remove: function(req, res) {
-    db.garden.findById(req.params.id)
-      .then(garden => garden.remove())
+  delete: function(req, res) {
+    db.garden.findById({id: req.params.id})
+      .then(garden => garden.deleteOne())
       .then(garden => res.json(garden))
       .catch(err => res.status(422).json(err));
-  }
+  },
+
+  findByUser: function(req,res) {
+  db.garden.find({ userName: req.params.userName})
+    .then(garden => res.json(garden))
+    .catch(err => res.status(422).json(err))}
 };

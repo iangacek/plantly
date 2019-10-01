@@ -30,8 +30,8 @@ class App extends Component {
  }
  getUser() {
    axios.get('/user/').then(response => {
-     console.log('Get user response: ')
-     console.log(response.data)
+    //  console.log('Get user response: ')
+    //  console.log(response.data)
      if (response.data.user) {
        console.log('Get User: There is a user saved in the server session: ')
        this.setState({
@@ -48,6 +48,7 @@ class App extends Component {
    })
  };
  render() {
+  //  console.log(this.state.username)
    return (
      <div>
        <Router>
@@ -73,7 +74,7 @@ class App extends Component {
            <Route exact path="/signup" render={() => {return <Home username={this.state.username}/>}}/>
            <Route exact path="/explore" render={() => {return <Explore username={this.state.username}/>}}/>
            <Route exact path="/search" render={() => {return <Search username={this.state.username}/>}}/>
-           <Route exact path="/myGarden" render={() => {return <MyGarden username={this.state.username}/>}}/>
+           <Route exact path="/myGarden" render={() => {return <MyGarden userName={this.state.username}/>}}/>
            <Route exact path="/myGarden/plantEntry" render={() => {return <PlantEntry username={this.state.username}/>}}/>
          </Switch>
        }
