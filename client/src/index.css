@@ -72,8 +72,7 @@ body {
     font-style: italic;
     font-size: 25px; }
   .plantCard p {
-    font-size: 20px;
-    max-width: 2000px; }
+    font-size: 20px; }
   .plantCard button {
     border-radius: 8px;
     font-size: 20px; }
