@@ -77,13 +77,19 @@ app.get("/plantly-search/:plantName", (req, res) => {
 // Plantly Add To Garden route
 app.post("/plantly-addToGarden", (req, res) => {
   console.log("Added a plant to your garden");
-  console.log(req.body);
+  console.log("app.post to garden", req.body);
   db.garden
   .create(req.body)
   .then(gardens => {
-    console.log(gardens);
+    console.log('what is this',gardens);
     res.json(gardens);
   });
+});
+
+app.get("/myGarden/:userName", (req, res) => {
+  db.garden
+    .find({ userName: { $regex: req.params.userName, $options: "i" }})
+    .then(userName => res.json(userName))
 });
 
 // ================================= ADD-PLANT ROUTES =================================
