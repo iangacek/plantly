@@ -22,7 +22,7 @@ class PlantCard extends Component {
           <img src={plant.img} className="auth-image" alt={plant.commonName}></img>
 
           <button onClick={this.formSubmit}>Add to My Garden</button>
-        {showButton && <button onClick={this.formSubmit}>delete</button>}
+        {/* {showButton && <button onClick={this.deleteSubmit}>Delete from My Garden</button>} */}
         {/* //the delete button above needs to call the delete function from somewhere  */}
 
         </div>
@@ -31,11 +31,17 @@ class PlantCard extends Component {
     );
   }
 
+  // deleteSubmit =  event => {
+  //   event.preventDefault();
+  //   API.deletePlant(this.props);
+  //   console.log("delete hit")
+  // };
+
   formSubmit = event => {
     
     event.preventDefault();
     API.addToGarden(this.props);
-    console.log("this", this.props);
+    // console.log("this", this.props);
   };
 }
 

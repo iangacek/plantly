@@ -113,7 +113,7 @@ app.post("/submit", function(req, res) {
 // Delete plant from mongo database
 // app.delete("/delete", function(req, res) {
 //     console.log("plant data: ", req.body);
-//     db.plantdb.delete(plant, function(error, deleted) {
+//     db.garden.delete(plant, function(error, deleted) {
 //       if (error) {
 //         res.send(error)
 //       } else {

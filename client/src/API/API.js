@@ -26,11 +26,11 @@ export default {
     findByUser: (userName) => {
         console.log(userName, "API GARDEN CALL")
         return axios.get("/myGarden/" + userName);
-    }
+    },
 
-    // // deletePlant: 
-    // deletePlant: () =>{
-    //   console.log("deletePlant hit!")
+    // deletePlant: (id) => {
+    //   console.log("deletePlant hit!");
+    //   return axios.delete("/delete", id)
     // }
 };
 
