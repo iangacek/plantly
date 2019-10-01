@@ -111,8 +111,8 @@ app.post("/submit", function(req, res) {
 });
 
 // Delete plant from mongo database
-app.delete("/delete/:id", function(req, res) {
-    db.garden.deleteOne(id, function(error, deleted) {
+app.delete("/delete/:_id", function(req, res) {
+    db.garden.deleteOne(plant._id, function(error, deleted) {
       if (error) {
         res.send(error)
       } else {
