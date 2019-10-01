@@ -43,13 +43,15 @@ body{
 }
 
 .search-container {
-    h1{
-    font-size: 75px;
-    font-weight: 100;
-    color: grey;
-    font-family: 'Encode Sans Expanded', sans-serif;
-    text-align: center;
-    padding-left: 30%;
+    h6{
+        font-size: 75px;
+        font-weight: 100;
+        margin-block-start: .75em;
+        margin-block-end: .75em;
+        color: grey;
+        font-family: 'Encode Sans Expanded', sans-serif;
+        text-align: center;
+        padding-left: 30%;
     }
     form {
         text-align: center;
@@ -92,6 +94,8 @@ body{
     border-style: ridge;
     h1 {
         font-size: 30px;
+        text-align: center;
+        display: block;
     }
     h3 {
         font-style: italic;
@@ -249,14 +253,33 @@ body{
 
 .SignupForm {
     text-align: center;
-    h4 {
-        font-size: 50px;
-        color: rgb(85, 85, 85);
-        font-weight: bold;
+        h4 {
+            font-size: 75px;
+            font-weight: 100;
+            margin-block-start: .75em;
+            margin-block-end: .75em;
+            padding-left: 30%;
+            color: rgb(85, 85, 85);
     }
     form {
         font-size: 25px;
+        font-family: 'Encode Sans Expanded', sans-serif;
+        padding-left: 30%;
     }
+    input[type=text] {
+        width: 20%;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: white;
+        font-size: 20px;
+      }
+      input[type=password] {
+        width: 20%;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: white;
+        font-size: 20px;
+      }
     button{
         border-radius: 8px;
         font-size: 20px;
@@ -271,6 +294,7 @@ body{
     a { 
         color: grey; 
         font-size: 20px;
+        padding-left: 30%;
     }
 }
 

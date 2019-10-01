@@ -30,8 +30,8 @@ class App extends Component {
  }
  getUser() {
    axios.get('/user/').then(response => {
-     console.log('Get user response: ')
-     console.log(response.data)
+    //  console.log('Get user response: ')
+    //  console.log(response.data)
      if (response.data.user) {
        console.log('Get User: There is a user saved in the server session: ')
        this.setState({
@@ -48,7 +48,7 @@ class App extends Component {
    })
  };
  render() {
-   console.log(this.state.username)
+  //  console.log(this.state.username)
    return (
      <div>
        <Router>

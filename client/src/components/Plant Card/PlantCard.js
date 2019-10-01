@@ -5,7 +5,7 @@ class PlantCard extends Component {
 
   render() {
     const { plant, userName, showDeleteButton, showAddButton} = this.props;
-    console.log(this.props, "props");
+    // console.log(this.props, "props");
 
     return (
       <div className="plantCard">
@@ -23,7 +23,6 @@ class PlantCard extends Component {
 
         {showAddButton && <button onClick={this.formSubmit}>Add to My Garden</button>}
         {showDeleteButton && <button onClick={this.deleteSubmit}>Delete from My Garden</button>}
-        {/* //the delete button above needs to call the delete function from somewhere  */}
 
         </div>
       </div>
@@ -31,17 +30,14 @@ class PlantCard extends Component {
     );
   }
 
-  // deleteSubmit =  event => {
-  //   event.preventDefault();
-  //   API.deletePlant(this.props);
-  //   console.log("delete hit")
-  // };
+  deleteSubmit =  event => {
+    event.preventDefault();
+    API.deletePlant(this.props);
+  };
 
   formSubmit = event => {
-    
     event.preventDefault();
     API.addToGarden(this.props);
-    // console.log("this", this.props);
   };
 }
 

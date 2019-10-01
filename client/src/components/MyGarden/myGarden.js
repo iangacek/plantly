@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import API from "../../API/API.js";
 import PlantCard from "../Plant Card/PlantCard.js";
@@ -9,7 +9,7 @@ const MyGarden = (props) => {
 
   useEffect(() => {
     API.findByUser(props.userName).then(user => {
-      console.log('api returned ', user);
+      // console.log('api returned ', user);
       setPlants(user);
     }
 
@@ -18,7 +18,7 @@ const MyGarden = (props) => {
     })
   }, [props.userName]);
 
-  console.log(plants);
+  console.log(plants.data);
   return (
     <div className="myGarden">
       <h1>My Garden</h1>

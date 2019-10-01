@@ -24,14 +24,14 @@ export default {
     },
 
     findByUser: (userName) => {
-        console.log(userName, "API GARDEN CALL")
+        // console.log(userName, "API GARDEN CALL")
         return axios.get("/myGarden/" + userName);
     },
 
-    // deletePlant: (id) => {
-    //   console.log("deletePlant hit!");
-    //   return axios.delete("/delete", id)
-    // }
+    deletePlant: (id) => {
+      console.log("deletePlant hit!");
+      return axios.delete("/delete/:" + id);
+    }
 };
 
 

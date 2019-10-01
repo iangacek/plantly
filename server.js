@@ -111,17 +111,16 @@ app.post("/submit", function(req, res) {
 });
 
 // Delete plant from mongo database
-// app.delete("/delete", function(req, res) {
-//     console.log("plant data: ", req.body);
-//     db.garden.delete(plant, function(error, deleted) {
-//       if (error) {
-//         res.send(error)
-//       } else {
-//         res.send(deleted);
-//         console.log("Delete hit!");
-//       }
-//     });
-// });
+app.delete("/delete/:id", function(req, res) {
+    db.garden.deleteOne(id, function(error, deleted) {
+      if (error) {
+        res.send(error)
+      } else {
+        res.send(deleted);
+        console.log("Delete hit!");
+      }
+    });
+});
 
 // Default route to index.html
 app.get("*", (req, res) => {
