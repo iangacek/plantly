@@ -74,7 +74,7 @@ class App extends Component {
            <Route exact path="/signup" render={() => {return <Home username={this.state.username}/>}}/>
            <Route exact path="/explore" render={() => {return <Explore username={this.state.username}/>}}/>
            <Route exact path="/search" render={() => {return <Search username={this.state.username}/>}}/>
-           <Route exact path="/myGarden" render={() => {return <MyGarden username={this.state.username}/>}}/>
+           <Route exact path="/myGarden" render={() => {return <MyGarden userName={this.state.username}/>}}/>
            <Route exact path="/myGarden/plantEntry" render={() => {return <PlantEntry username={this.state.username}/>}}/>
          </Switch>
        }

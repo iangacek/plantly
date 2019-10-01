@@ -5,7 +5,7 @@ class PlantCard extends Component {
 
   render() {
     const { plant, userName} = this.props;
-    console.log("username", userName);
+    console.log(this.props, "props");
 
     return (
       <div className="plantCard">
@@ -29,9 +29,10 @@ class PlantCard extends Component {
   }
 
   formSubmit = event => {
+    
     event.preventDefault();
-    API.addToGarden(this);
-    console.log("this", this);
+    API.addToGarden(this.props);
+    console.log("this", this.props);
   };
 }
 
