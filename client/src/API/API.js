@@ -9,9 +9,23 @@ export default {
 
     searchPlants: (term) => {
         return axios.get("/plantly-search/" + term)
-    }
-};
-  
+    },
 
+    addToGarden: (id) => {
+        console.log("plant-console log", id.props.plant)
+        return axios.post("/plantly-addToGarden", id.props.plant)
+    },
+
+    // Saves a plant to the database
+    savePlant: (plantData) => {
+        console.log("savePlant hit!")
+        return axios.post("/submit", plantData);
+    },
+
+    // // deletePlant: 
+    // deletePlant: () =>{
+    //   console.log("deletePlant hit!")
+    // }
+};
 
 

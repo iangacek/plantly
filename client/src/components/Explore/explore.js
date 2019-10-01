@@ -17,7 +17,7 @@ class Explore extends React.Component {
   render() {
     console.log(this.state.plants)
     return (
-      <div>
+      <div className="explore-container">
         <h1>Explore new plants</h1>
         <div>
           {this.state.plants.map( plant => <PlantCard plant = {plant}/>)}
