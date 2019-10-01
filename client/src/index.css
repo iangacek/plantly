@@ -72,7 +72,8 @@ body {
     font-style: italic;
     font-size: 25px; }
   .plantCard p {
-    font-size: 20px; }
+    font-size: 20px;
+    max-width: 2000px; }
   .plantCard button {
     border-radius: 8px;
     font-size: 20px; }
@@ -85,7 +86,7 @@ body {
     /* Green */
     color: white; }
   .plantCard img {
-    width: 300px;
+    width: 350px;
     height: 400px;
     float: left; }
 
