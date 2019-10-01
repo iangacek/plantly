@@ -1,32 +1,31 @@
-import React, {FC, useState, useEffect} from "react";
-import {Link} from "react-router-dom";
-import API from "../../API/API.js"; 
+import React, { FC, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import API from "../../API/API.js";
 import PlantCard from "../Plant Card/PlantCard.js";
 
 const MyGarden = (props) => {
 
   const [plants, setPlants] = useState([])
-  
+
   useEffect(() => {
-    API.findByUser(props.userName).then(user =>
-      {
-        console.log('api returned ', user);
-        setPlants(user);
-      }
-      
+    API.findByUser(props.userName).then(user => {
+      console.log('api returned ', user);
+      setPlants(user);
+    }
+
     ).catch((err) => {
-      console.log("api error", err) 
+      console.log("api error", err)
     })
-  },[props.userName]);
-  
+  }, [props.userName]);
+
   console.log(plants);
   return (
     <div className="myGarden">
       <h1>My Garden</h1>
       <h2>Your dashboard for virtual plant management</h2>
-  
-      {plants.data ? plants.data.map(plant => <PlantCard plant = {plant.plant}/>) : null}
-     
+
+      {plants.data ? plants.data.map(plant => <PlantCard plant={plant.plant} showButton={true}/>) : null}
+
       {/* Add plant to plantdb collection */}
       {/* <button class = "addPlant">Add New Plant</button> */}
       <Link to={"/myGarden/plantEntry"}>Add a New Plant</Link>
