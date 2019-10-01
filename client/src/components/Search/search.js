@@ -58,7 +58,7 @@ class Search extends React.Component {
         </form>
 
         {this.state.plants.map(plant => (
-          <PlantCard plant={plant} userName={this.state.username}/>
+          <PlantCard plant={plant} userName={this.state.username} showAddButton={true}/>
         ))}
 
       </div>

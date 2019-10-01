@@ -4,7 +4,7 @@ import API from "../../API/API.js";
 class PlantCard extends Component {
 
   render() {
-    const { plant, userName, showButton} = this.props;
+    const { plant, userName, showDeleteButton, showAddButton} = this.props;
     console.log(this.props, "props");
 
     return (
@@ -21,8 +21,8 @@ class PlantCard extends Component {
           <p><b>Pet Toxicity:</b> {plant.petToxicity}</p>
           <img src={plant.img} className="auth-image" alt={plant.commonName}></img>
 
-          <button onClick={this.formSubmit}>Add to My Garden</button>
-        {/* {showButton && <button onClick={this.deleteSubmit}>Delete from My Garden</button>} */}
+        {showAddButton && <button onClick={this.formSubmit}>Add to My Garden</button>}
+        {showDeleteButton && <button onClick={this.deleteSubmit}>Delete from My Garden</button>}
         {/* //the delete button above needs to call the delete function from somewhere  */}
 
         </div>
