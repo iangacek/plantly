@@ -18,3 +18,4 @@ const gardenSchema = new Schema({
 });
 
 module.exports = mongoose.model("garden", gardenSchema);
+
