@@ -28,7 +28,7 @@ class Explore extends React.Component {
     return (
       <div className="explore-container">
         <h5>Explore new plants</h5>
-          {this.state.plants.map( plant => <PlantCard plant = {plant} userName={this.state.username}/>)}
+          {this.state.plants.map( plant => <PlantCard plant = {plant} userName={this.state.username} showAddButton={true}/>)}
           </div>
      );
   }
