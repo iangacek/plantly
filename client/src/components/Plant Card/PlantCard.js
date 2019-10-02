@@ -33,6 +33,7 @@ class PlantCard extends Component {
   deleteSubmit =  event => {
     event.preventDefault();
     API.deletePlant(this.props.id);
+    window.location.reload();
   };
 
   formSubmit = event => {

@@ -50,6 +50,7 @@ class LoginForm extends Component {
                 console.log(error);
                 
             })
+         
     }
 
     render() {
