@@ -4,31 +4,41 @@ import API from "../../API/API.js";
 class PlantCard extends Component {
 
   render() {
-    const { plant, userName} = this.props;
-    console.log("username", this.props.userName);
-    // console.log(this.props.userName);
+    const { plant, userName, showDeleteButton, showAddButton} = this.props;
+    // console.log(this.props, "props");
+
     return (
       <div className="plantCard">
+
         <div>
+          <p><img src={plant.img} className="auth-image" alt={plant.commonName}></img>
           <h1>{plant.commonName}</h1>
           <h3>{plant.scientificName}</h3>
-          <p>Lighting Requirements: {plant.light}</p>
-          <p>Watering: {plant.water}</p>
-          <p>Soil Preferences: {plant.soil}</p>
-          <p>Propagation: {plant.propagation}</p>
-          <p>Fertilizing: {plant.fertilizer}</p>
-          <p>Pet Toxicity: {plant.petToxicity}</p>
-          <img src={plant.img} alt={plant.commonName}></img>
-          <button onClick={this.formSubmit}>Add to My Garden</button>
+          <p><b>Lighting Requirements:</b> {plant.light}</p>
+          <p><b>Watering:</b> {plant.water}</p>
+          <p><b>Soil Preferences:</b> {plant.soil}</p>
+          <p><b>Propagation:</b> {plant.propagation}</p>
+          <p><b>Fertilizing:</b> {plant.fertilizer}</p>
+          <p><b>Pet Toxicity:</b> {plant.petToxicity}</p>
+          </p>
+        {showAddButton && <button onClick={this.formSubmit}>Add to My Garden</button>}
+        {showDeleteButton && <button onClick={this.deleteSubmit}>Delete from My Garden</button>}
+
         </div>
       </div>
+      
     );
   }
 
+  deleteSubmit =  event => {
+    event.preventDefault();
+    API.deletePlant(this.props.id);
+    window.location.reload();
+  };
+
   formSubmit = event => {
     event.preventDefault();
-    API.addToGarden(this);
-    // console.log("username", this.props.userName);
+    API.addToGarden(this.props);
   };
 }
 

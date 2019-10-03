@@ -15,13 +15,6 @@ class Search extends React.Component {
     this.setState({username: this.props.username});
   }
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     username: this.props.username
-  //   };
-  // }
-
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -42,11 +35,27 @@ class Search extends React.Component {
     console.log(this.state.plants);
   };
 
+  handleAdd = (commonName) =>{
+    console.log("handleaddgarden")
+    //api call to
+    let userName = "Laura"
+   commonName = "jade"
+   console.log(this.state.plants)
+   let plant = this.state.plants[0]
+   console.log("PLANT: ", plant)
+     API.addToGarden(plant, userName)
+     .then(result =>{
+       // render with a message
+     })
+
+   
+  }
+
   render() {
     console.log(this.state.username, "username");
     return (
       <div className="search-container">
-        <h1>Plant Search</h1>
+        <h6>Plant Search</h6>
         <form className="form">
           <input
             name="searchTerm"
@@ -57,11 +66,11 @@ class Search extends React.Component {
           ></input>
           <button onClick={this.formSubmit}>Submit</button>
         </form>
-
+        <div className="explore-container">
         {this.state.plants.map(plant => (
-          <PlantCard plant={plant} userName={this.state.username}/>
+          <PlantCard plant={plant} userName={this.state.username} showAddButton={true}/>
         ))}
-
+      </div>
       </div>
     );
   }

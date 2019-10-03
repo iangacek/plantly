@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:100&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 body {
   margin: 0;
   background-color: white;
@@ -16,39 +17,106 @@ body {
   .home .description {
     font-weight: bold; }
 
-.search-container {
-  font-size: 50px;
+.search-container h6 {
+  font-size: 75px;
+  font-weight: 100;
+  margin-block-start: .75em;
+  margin-block-end: .75em;
   color: grey;
   font-family: 'Encode Sans Expanded', sans-serif;
-  text-align: center; }
+  text-align: center;
+  padding-left: 30%; }
+
+.search-container form {
+  text-align: center;
+  padding-left: 30%; }
+
+.search-container input[type=text] {
+  width: 20%;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 20px; }
+
+.search-container button {
+  border-radius: 8px;
+  font-size: 20px; }
+
+.search-container button:hover {
+  border-radius: 8px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  background-color: grey;
+  /* Green */
+  color: white; }
 
 .explore-container {
+  color: #555555;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align: center;
+  padding-left: 30%; }
+  .explore-container h5 {
+    font-size: 75px;
+    font-weight: 100;
+    margin-block-start: .75em;
+    margin-block-end: .75em; }
+
+.plantCard {
+  border-style: ridge; }
+  .plantCard h1 {
+    font-size: 30px;
+    text-align: center;
+    display: block; }
+  .plantCard h3 {
+    font-style: italic;
+    font-size: 25px; }
+  .plantCard p {
+    font-size: 20px; }
+  .plantCard button {
+    border-radius: 8px;
+    font-size: 20px; }
+  .plantCard button:hover {
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    background-color: grey;
+    /* Green */
+    color: white; }
+  .plantCard img {
+    width: 350px;
+    height: 400px;
+    float: left; }
+
+.myGarden {
   font-size: 25px;
   color: #555555;
   font-family: 'Encode Sans Expanded', sans-serif;
-  text-align: center; }
-
-.plantCard {
-  font-weight: bold; }
-
-h3 {
-  font-style: italic; }
+  text-align: center;
+  padding-left: 30%; }
+  .myGarden h1 {
+    font-weight: 100; }
+  .myGarden h2 {
+    font-weight: 100; }
+  .myGarden p {
+    font-weight: 100; }
+  .myGarden a {
+    color: grey; }
+  .myGarden a:hover {
+    color: #4a4d4d;
+    font-weight: bold; }
 
 .navbar {
   border-bottom: 3px solid #dddddd;
-  border-top: 3px solid #dddddd;
-  padding-top: 2%;
+  border-top: 0px solid #dddddd;
   background-image: radial-gradient(white, white);
-  height: 225px;
+  height: 220px;
   display: grid;
   grid-area: header; }
   .navbar .nav {
     display: block;
     list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     padding-inline-start: 40px; }
     .navbar .nav .title {
       margin-top: 0px;
@@ -75,6 +143,9 @@ h3 {
   text-decoration: none; }
   .list a {
     color: grey; }
+  .list a:hover {
+    color: #4a4d4d;
+    font-weight: bold; }
 
 .item {
   color: white; }
@@ -82,11 +153,28 @@ h3 {
 .login {
   text-align: center; }
   .login h4 {
-    font-size: 50px;
-    color: #555555;
-    font-weight: bold; }
+    font-size: 75px;
+    font-weight: 100;
+    margin-block-start: .75em;
+    margin-block-end: .75em;
+    padding-left: 30%;
+    color: #555555; }
   .login form {
-    font-size: 25px; }
+    font-size: 25px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    padding-left: 30%; }
+  .login input[type=text] {
+    width: 20%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 20px; }
+  .login input[type=password] {
+    width: 20%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 20px; }
   .login button {
     border-radius: 8px;
     font-size: 20px; }
@@ -100,16 +188,34 @@ h3 {
     color: white; }
   .login a {
     color: grey;
-    font-size: 20px; }
+    font-size: 20px;
+    padding-left: 30%; }
 
 .SignupForm {
   text-align: center; }
   .SignupForm h4 {
-    font-size: 50px;
-    color: #555555;
-    font-weight: bold; }
+    font-size: 75px;
+    font-weight: 100;
+    margin-block-start: .75em;
+    margin-block-end: .75em;
+    padding-left: 30%;
+    color: #555555; }
   .SignupForm form {
-    font-size: 25px; }
+    font-size: 25px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    padding-left: 30%; }
+  .SignupForm input[type=text] {
+    width: 20%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 20px; }
+  .SignupForm input[type=password] {
+    width: 20%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 20px; }
   .SignupForm button {
     border-radius: 8px;
     font-size: 20px; }
@@ -123,7 +229,8 @@ h3 {
     color: white; }
   .SignupForm a {
     color: grey;
-    font-size: 20px; }
+    font-size: 20px;
+    padding-left: 30%; }
 
 .home {
   font-size: 300%; }
@@ -150,4 +257,13 @@ h3 {
       font-size: 150%; } }
   @media only screen and (max-width: 100em) {
     .list {
+      font-size: 200%; } }
+
+.explore-container {
+  font-size: 300%; }
+  @media only screen and (min-width: 112.5em) {
+    .explore-container {
+      font-size: 300%; } }
+  @media only screen and (max-width: 100em) {
+    .explore-container {
       font-size: 200%; } }

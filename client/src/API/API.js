@@ -12,8 +12,8 @@ export default {
     },
 
     addToGarden: (id) => {
-        console.log("plant-console log", id.props.plant)
-        return axios.post("/plantly-addToGarden", id.props.plant)
+        console.log("plant-console log", id)
+        return axios.post("/plantly-addToGarden", id)
     },
 
     // Saves a plant to the database
@@ -22,10 +22,15 @@ export default {
         return axios.post("/submit", plantData);
     },
 
-    // // deletePlant: 
-    // deletePlant: () =>{
-    //   console.log("deletePlant hit!")
-    // }
+    findByUser: (userName) => {
+        // console.log(userName, "API GARDEN CALL")
+        return axios.get("/myGarden/" + userName);
+    },
+
+    deletePlant: (id) => {
+      console.log("deletePlant hit!");
+      return axios.delete("/delete/" + id);
+    }
 };
 
 
