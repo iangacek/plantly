@@ -28,9 +28,9 @@ export default {
         return axios.get("/myGarden/" + userName);
     },
 
-    deletePlant: (_id) => {
+    deletePlant: (id) => {
       console.log("deletePlant hit!");
-      return axios.delete("/delete/:" + _id);
+      return axios.delete("/delete/" + id);
     }
 };
 

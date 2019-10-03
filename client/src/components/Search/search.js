@@ -34,6 +34,22 @@ class Search extends React.Component {
     console.log(this.state.plants);
   };
 
+  handleAdd = (commonName) =>{
+    console.log("handleaddgarden")
+    //api call to
+    let userName = "Laura"
+   commonName = "jade"
+   console.log(this.state.plants)
+   let plant = this.state.plants[0]
+   console.log("PLANT: ", plant)
+     API.addToGarden(plant, userName)
+     .then(result =>{
+       // render with a message
+     })
+
+   
+  }
+
   render() {
     console.log(this.state.username, "username");
     return (

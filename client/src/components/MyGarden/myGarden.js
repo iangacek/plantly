@@ -24,7 +24,7 @@ const MyGarden = (props) => {
       <h1>My Garden</h1>
       <h2>Your dashboard for virtual plant management</h2>
 
-      {plants.data ? plants.data.map(plant => <PlantCard plant={plant.plant} showDeleteButton={true} showAddButton={false} /> ) : null}
+      {plants.data ? plants.data.map((plant, i) => <PlantCard id={plants.data[i]._id} plant={plant.plant} showDeleteButton={true} showAddButton={false} /> ) : null}
 
       {/* Add plant to plantdb collection */}
       {/* <button class = "addPlant">Add New Plant</button> */}

@@ -11,6 +11,7 @@ class PlantCard extends Component {
       <div className="plantCard">
 
         <div>
+          <p><img src={plant.img} className="auth-image" alt={plant.commonName}></img>
           <h1>{plant.commonName}</h1>
           <h3>{plant.scientificName}</h3>
           <p><b>Lighting Requirements:</b> {plant.light}</p>
@@ -19,8 +20,7 @@ class PlantCard extends Component {
           <p><b>Propagation:</b> {plant.propagation}</p>
           <p><b>Fertilizing:</b> {plant.fertilizer}</p>
           <p><b>Pet Toxicity:</b> {plant.petToxicity}</p>
-          <img src={plant.img} className="auth-image" alt={plant.commonName}></img>
-
+          </p>
         {showAddButton && <button onClick={this.formSubmit}>Add to My Garden</button>}
         {showDeleteButton && <button onClick={this.deleteSubmit}>Delete from My Garden</button>}
 
@@ -32,7 +32,8 @@ class PlantCard extends Component {
 
   deleteSubmit =  event => {
     event.preventDefault();
-    API.deletePlant(this.props);
+    API.deletePlant(this.props.id);
+    window.location.reload();
   };
 
   formSubmit = event => {

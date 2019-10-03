@@ -103,11 +103,7 @@ body{
     }
     p {
         font-size: 20px;
-    }
-    img {
-        width: 25%;
-        height: 25%;
-        // float: left;
+        // max-width: 2000px;
     }
     button{
         border-radius: 8px;
@@ -119,6 +115,11 @@ body{
         transition-duration: 0.4s;
         background-color: grey; /* Green */
         color: white; 
+    }
+    img {
+        width: 350px;
+        height: 400px;
+        float: left;
     }
 }
 
