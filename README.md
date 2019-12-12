@@ -1,5 +1,5 @@
 # Plantly
-This application utilizes Mongo, Passport
+This is a Node.js application that utilizes RESTful API and a MongoDB back-end to look up plants and their care info on a React.js UI.
 
 ## Feature Overview
 Recycle-It is a quick and easy way to locate recycling-facilities near you. The user simply puts in their zipcode, radius limit and material-type.
