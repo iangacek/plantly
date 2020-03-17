@@ -5,7 +5,7 @@ This is a Node.js application that utilizes a ORM and a MongoDB back-end to look
 Log-in and look up plants from a house-made database, then save your favorite plant-info to your account.
 
 ## Motivation
-This game is part of the University of Minnesota's Web Application Development program in which students utilize their ORM, REST API, and React.js capabilities. 
+This application is part of the University of Minnesota's Web Application Development program in which students utilize their ORM, REST API, and React.js capabilities. 
 
 ## Result
 The result is an aesthetically simple design that users can use to quickly look up and save plant info.
