@@ -31,7 +31,7 @@
     "fs": "0.0.1-security",
     "if-env": "^1.0.4",
     "mongo-store": "0.0.2",
-    "mongoose": "^5.9.7",
+    "mongoose": "^5.13.15",
     "mongoose-update-if-current": "^1.4.0",
     "morgan": "^1.10.0",
     "node-sass": "^6.0.1",
